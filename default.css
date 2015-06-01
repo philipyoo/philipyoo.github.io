@@ -1,0 +1,115 @@
+html {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: #3083FF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3E687F;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #268FCC;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+  text-decoration: underline;
+}
+
+header {
+  border-style: inset;
+  border-color: #2793D1;
+  position: relative;
+}
+
+#banner-name {
+  font-size: 40pt;
+  font-family: Courier, monospace;
+  margin: 5px 10px 5px 10px;
+  padding-left: 40px;
+}
+
+#banner-text {
+  margin: 0px 0px 5px 0px;
+  padding-left: 50%;
+}
+
+nav {
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+  position: relative;
+}
+
+section {
+  position: relative;
+  text-align: center;
+  margin: 25px 50px 10px 50px;
+  display: inline-block;
+}
+
+table {
+  margin-top: 20px;
+}
+
+td {
+  width: 50%;
+  padding: 25px;
+}
+
+.max-width {
+  border: 1px black solid;
+  width: 90%;
+}
+
+span {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+#blog-title {
+  font-size: 14pt;
+  text-align: left;
+  margin-bottom: 0px;
+}
+
+#date-title {
+  font-size: 10pt;
+  text-align: left;
+}
+
+#blog-links {
+  font-size: 9pt;
+  padding: 10px;
+  border: 1px black solid;
+  display: inline-block;
+  float: center;
+}
+
+
+footer {
+  border-style: outset;
+  border-color: #2793D1;
+  position: relative;
+  margin: 0px 0px 0px 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/*Monochromatic color scheme
+
+#2793D1
+#7CCFFF
+#3083FF
+#3E687F
+#268FCC
+*/
+
+
+
