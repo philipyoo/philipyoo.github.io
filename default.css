@@ -101,6 +101,14 @@ footer {
   text-align: center;
 }
 
+#twitter-share-button {
+  margin-right: 20px;
+}
+
+#fb-share-button {
+  margin-left: 20px;
+}
+
 
 /*Monochromatic color scheme
 
