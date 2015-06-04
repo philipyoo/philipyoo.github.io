@@ -63,8 +63,13 @@ td {
 }
 
 .max-width {
-  border: 1px black solid;
+  margin-top: 50px;
+  border: 1px #268FCC solid;
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  float: center;
+  background-color: #D8E1E5;
 }
 
 span {
@@ -75,20 +80,23 @@ span {
 #blog-title {
   font-size: 14pt;
   text-align: left;
+  padding-left: 15px;
   margin-bottom: 0px;
 }
 
 #date-title {
   font-size: 10pt;
+  padding-left: 15px;
   text-align: left;
 }
 
 #blog-links {
   font-size: 9pt;
   padding: 10px;
-  border: 1px black solid;
-  display: inline-block;
-  float: center;
+  border: 1px #3E687F solid;
+  text-align: center;
+  vertical-align: center;
+  background-color: white;
 }
 
 .codeblock {
