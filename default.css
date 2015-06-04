@@ -1,3 +1,5 @@
+/*Main*/
+
 html {
   font-family: 'Courier New', Courier, monospace;
 }
@@ -61,6 +63,68 @@ td {
   width: 50%;
   padding: 25px;
 }
+
+/*Blog Index*/
+
+.body-format {
+  position: relative;
+  background-color: red;
+  margin: 10px auto;
+  width: 100%;
+  height: 500px;
+}
+
+#left-scroll {
+  position: relative;
+  border: 1px solid black;
+  background-color: yellow;
+  opacity: 0.5;
+  height: 33%;
+  top: 33%;
+  width: 35%;
+  float: left;
+  overflow: auto;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+#wrapper {
+  position: relative;
+  background-color: green;
+  opacity: 0.5;
+  float: right;
+  width: 64%;
+  height: 100%;
+}
+
+#bloglink-scrollbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#bloglink-scrollbar > li {
+  font-size: 12pt;
+  margin: 5px;
+  padding: 5px;
+  text-align: left;
+  text-indent: none;
+  list-style: none;
+}
+
+#wrap-title {
+  position: relative;
+}
+
+#wrap-minis {
+  position: relative;
+}
+
+#wrap-link {
+  position: relative;
+}
+
+/*Blog Posts*/
 
 .max-width {
   margin-top: 50px;
