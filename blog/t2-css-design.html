@@ -1,37 +1,68 @@
 <!DOCTYPE html>
-<head>
-  <title>Understanding CSS concepts</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
-</head>
+<html>
+  <head>
+    <title>Philip Yoo | CSS Design</title>
+    <meta charset="UTF-8">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css">
+  </head>
+  <body>
+    <!-- Facebook Button Code -->
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
 
-<main>
-  <h1>Understanding CSS concepts</h1>
-  <h2>What are the differences between relative, absolute, and fixed positioning?</h2>
-  <h4>May 31, 2015</h4>
+    <header>
+      <h1 id="banner-name">Philip Yoo</h1>
+      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
+    </header>
 
-  <section>
-    <p>
-      One of the topics I had a hard time understanding was positioning concepts in CSS. Seriously, why are there even 4+ different positioning types? The more I messed around with CSS and got to test different things out, the more I realized the importance of each different positioning type.
-    </p>
-    <p>
-      Ok, so I will start with <u>static</u> positioning, which is the default if you do not give a position type. If you are writing html, writing out your content, and you have all these different blocks (i.e. paragraphs, header, footer, sections, etc), every block will appear in order by the way you wrote it out on your html file. Static is simply giving elements no positions.
-    </p>
-    <p>
-      <u>Relative</u> positioning is where elements and blocks will be positioned according to other elements on the page. If you give every element and block a relative position but you don't adjust its positioning with any other css code, it will display your page exactly as how it would have displayed your page if every element or block was given static positioning. If you adjust the position of an element (i.e. `top: -50px`), you will see that the position of this element will move relative to where it would have been with a static position.
-    </p>
-    <p>
-      <u>Fixed</u> positioning will stick the element to the page and won't budge. So if you scroll up and down, the element will always be displayed wherever you put it originally. I have seen some webpages that would have their header displayed all the time no matter how far down you scroll. This would be one use-case example for this type of positioning.
-    </p>
-    <p>
-      <u>Absolute</u> positioning is sort of like a mixture of fixed and relative. An element with an absolute position will stick wherever it is placed and won't budge. So in this case, it seems similar to a fixed position. But, absolute position will stick to the previous positioned item in your html document. So, just to help visualize this, lets say you have a relative position `<div>` in your html file. You then create an absolute position `<p>` after it. The `<p>` will position itself according to the `<div>` position on the page and will stick there.
-    </p>
-    <p>
-      Another example of absolute positioning.. Let's say we have all these elements in our html file but they are all static positioned. We finally add a `<p>` at the end that has absolute positioning. Since none of the previous elements are "positioned" (Remember how I related Static positioning as being given no position at all), the absolute `<p>` will position and stick to the body of the page. So it will basically turn into a Fixed position on the screen.
-    </p>
-    <p>
-      I hope this helped. Please contact me if you have any questions. Contact information is located at top.
-      <!-- Add a link here and change this paragraph -->
-    </p>
-  </section>
-</main>
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="#">Blog</a> | <a href="#">Contact</a>
+    </nav>
+
+    <div class="max-width">
+      <p id="blog-title"><span>Title</span>: What are the differences between relative, absolute, and fixed positioning in CSS?</p>
+      <p id="date-title"><span>Date</span>: May 31, 2015</p>
+      <div id="blog-links"><a href="t1-git-blog.html">Previous Post</a> | <a href="#">Back to Index</a> | <a href="t3-arrays-hashes.html">Next Post</a></div>
+    </div>
+
+    <section>
+      <p>
+        One of the topics I had a hard time understanding was positioning concepts in CSS. Seriously, why are there even 4+ different positioning types? The more I messed around with CSS and got to test different things out, the more I realized the importance of each different positioning type.
+      </p>
+      <p>
+        Ok, so I will start with <u>static</u> positioning, which is the default if you do not give a position type. If you are writing html, writing out your content, and you have all these different blocks (i.e. paragraphs, header, footer, sections, etc), every block will appear in order by the way you wrote it out on your html file. Static is simply giving elements no positions.
+      </p>
+      <p>
+        <u>Relative</u> positioning is where elements and blocks will be positioned according to other elements on the page. If you give every element and block a relative position but you don't adjust its positioning with any other css code, it will display your page exactly as how it would have displayed your page if every element or block was given static positioning. If you adjust the position of an element (i.e. `top: -50px`), you will see that the position of this element will move relative to where it would have been with a static position.
+      </p>
+      <p>
+        <u>Fixed</u> positioning will stick the element to the page and won't budge. So if you scroll up and down, the element will always be displayed wherever you put it originally. I have seen some webpages that would have their header displayed all the time no matter how far down you scroll. This would be one use-case example for this type of positioning.
+      </p>
+      <p>
+        <u>Absolute</u> positioning is sort of like a mixture of fixed and relative. An element with an absolute position will stick wherever it is placed and won't budge. So in this case, it seems similar to a fixed position. But, absolute position will stick to the previous positioned item in your html document. So, just to help visualize this, lets say you have a relative position `&lt;div&gt;` in your html file. You then create an absolute position `&lt;p&gt;` after it. The `&lt;p&gt;` will position itself according to the `&lt;div&gt;` position on the page and will stick there.
+      </p>
+      <p>
+        Another example of absolute positioning.. Let's say we have all these elements in our html file but they are all static positioned. We finally add a `&lt;p&gt;` at the end that has absolute positioning. Since none of the previous elements are "positioned" (Remember how I related Static positioning as being given no position at all), the absolute `&lt;p&gt;` will position and stick to the body of the page. So it will basically turn into a Fixed position on the screen.
+      </p>
+      <p>
+        I hope this helped. Please contact me if you have any questions. Contact information is located at top.
+      </p>
+    </section>
+
+    <footer>
+      <!-- Twitter Button Code -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <!-- Facebook Button Code-Add -->
+      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
+    </footer>
+  </body>
+</html>
