@@ -3,7 +3,7 @@
   <head>
     <title>Philip Yoo | Blog Index</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="../default.css">
   </head>
   <body>
 
@@ -27,22 +27,27 @@
       <a href="index.html">Home</a> | <a href="about-me.html">About Me</a> | <a href="blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
     </nav>
 
-    <div class="body-format">
+    <!-- Start miniblog posts -->
+
+    <section class="body-format">
       <script type="text/javascript" src="js/divload.js"></script>
       <script src="js/jquery.js"></script>
 
-      <div id="left-scroll">
-        <!-- Scrollbar with all blog titles -->
-        <!-- Go from oldest at bottom, to newest at top -->
-        <ul id="bloglink-scrollbar">
-          <li><button id="nav_page_a">hi</button></li>
-          <li id="nav_page_b">2. something</li>
-          <li><a href="miniblog/blog_one.html">3. something</a></li>
-          <li>4. something yolo</li>
-          <li>5. something</li>
-          <li>6. something</li>
-        </ul>
-      </div>
+      <div id="left-panel">
+        <p>Blog Posts:</p>
+
+        <div id="left-scroll">
+          <!-- Scrollbar with all blog titles -->
+          <!-- Go from oldest at bottom, to newest at top -->
+          <ul id="bloglink-scrollbar">
+            <li><a href="#">Thinking Style and Learning</a></li>
+            <li><a href="#">Ruby Arrays and Hashes</a></li>
+            <li><a href="#">CSS Positioning</a></li>
+            <li><a href="#">Why use Git and GitHub?</a></li>
+            <li><a href="#">Kitchen vs. Table</a></li>
+          </ul>
+        </div>
+      </section>
 
       <div id="wrapper">
         <div id="wrap-title">
@@ -51,24 +56,24 @@
         </div>
 
         <div id="wrap-minis">
-          <!-- Brief Description
-          Subjects -->
+          <!-- Once jquery figured out.. -->
           <!-- Minis in here -->
           <!-- default mini in here first -->
-          hello there is some text here
-          yolooo
-
-          heay
-          yaa
-
-          yeah
+          <p>
+            <span class="minititle">Topics</span>:<br/>
+            DBC | Culture | Week-One | Student Fears
+          </p>
+          <p>
+            <span class="minititle">Preview</span>:<br/>
+            Into my first week of DBC, I already can see that the program centers not only on the teaching experience, but in developing culture and empowering the students to strive for a truly life-changing event. Watching ...
+          </p>
         </div>
 
         <p id="wrap-link">
           Read More
         </p>
       </div>
-    </div>
+    </section>
 
     <footer>
       <!-- Twitter Button Code -->
