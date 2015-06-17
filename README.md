@@ -1,6 +1,3 @@
-# [philipyoo.github.io](philipyoo.github.io)
+# [philipyoo.github.io](http://philipyoo.github.io)
 
-
-[Click Here](http://philipyoo.github.io)
-
-My DBC Phase 0 github pages site
+Github repository for my personal website including blog posts, about me section, and contact information.
