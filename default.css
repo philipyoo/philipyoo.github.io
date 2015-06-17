@@ -64,6 +64,19 @@ td {
   padding: 25px;
 }
 
+#my_pic {
+  width: 120px;
+  border: 1px solid #3E687F;
+  border-radius: 10px;
+}
+
+#about_me li {
+  font-size: 12pt;
+  margin-left: 20%;
+  width: 60%;
+  padding: 5px;
+}
+
 /*Blog Index*/
 
 .body-format {
