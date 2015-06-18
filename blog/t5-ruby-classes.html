@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Philip Yoo | Ruby Class</title>
+    <meta charset="UTF-8">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css">
+  </head>
+  <body>
+    <!-- Facebook Button Code -->
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <h1 id="banner-name">Philip Yoo</h1>
+      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
+    </header>
+
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+    </nav>
+
+    <div class="max-width">
+      <p id="blog-title"><span>Title</span>: Playing with a Ruby Class</p>
+      <p id="date-title"><span>Date</span>: June 18, 2015</p>
+      <div id="blog-links"><a href="c5-feedback.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="#">Next Post</a></div>
+    </div>
+
+    <section>
+      <p>
+        Ruby Classes are great organizational tools where methods can be contained within and used within the class itself, but would have set restrictions of what the class object itself will send and receive with other types of objects outside of it.
+      </p>
+      <p>
+        So..That was kind of wordy and from my own experiences, it's best to learn things from testing things out and seeing the output. Let's first build an empty class called "LearnClass"
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          end<br/>
+        </code>
+      </div>
+      <p>
+        Cool, so we created a class. Note that I used CamelCase for the class name. This is a naming convention within the Ruby community and is best practices. If you looked at some of the already existing Ruby classes in <a href="http://ruby-doc.org/">RubyDocs</a>, you will see they used CamelCase as well.
+      </p>
+      <p>
+        Time to add methods to the class..
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          &nbsp;def introduction<br/>
+          &nbsp;&nbsp;return "Welcome to LearnClass!"<br/>
+          &nbsp;end<br/>
+          <br/>
+          &nbsp;def sum(a, b)<br/>
+          &nbsp;&nbsp;return a + b</br>
+          &nbsp;end<br/>
+          end<br/>
+          <br/>
+          test_var = LearnClass.new<br/>
+          > #&lt;LearnClass:0x007dsdc0abcpa0&gt;<br/>
+          test_var.introduction<br/>
+          > "Welcome to LearnClass!"
+        </code>
+      </div>
+      <p>
+        There are now 2 new methods inside the class: introduction and sum. Method introduction only returns a string. Method sum takes in 2 arguments and returns the sum of the 2 arguments. At the bottom, we created a new variable called `test_var` and we set it equal to a new <b>instance</b> of class LearnClass. You can see that the next line says "LearnClass:0x007ds...". This shows the identification of that new instance.
+      </p>
+      <p>
+        Creating a new instance of a class means that the new instance lives within the class but separately from all other instances of that class. It's like a brand new copy of the class and that instance can use any tools (or methods) available within the original class. Using variable `test_var` and calling on method introduction, we got the results returned from that method.
+      </p>
+      <p>
+        Classes all have a unique method called `initialize` that you can use. Whenever you create a new instance of that class, the `initialize` method will always be the first method that runs. Also, you can pass the `initialize` method arguments, and these are arguments that will always be required whenever you create an instance of that class.
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          &nbsp;def initialize(number)<br/>
+          &nbsp;&nbsp;@number = number<br/>
+          &nbsp;end<br/>
+          <br/>
+          &nbsp;def sum(a)<br/>
+          &nbsp;&nbsp;return a + @number</br>
+          &nbsp;end<br/>
+          end<br/>
+        </code>
+      </div>
+      <p>
+        Before we start using the class, note that I passed an argument to the method initialize. Whenever we create a new instance of class LearnClass, we always need to pass one argument now. Also, note how inside the initialize method, we have "@number = number". The "@" sign represents an <b>instance variable</b>. These variables live inside the class and can be used among all the methods inside the class. So the scope of these variables is the entire class. The scope of variables inside methods is only within the method itself. Note that I changed the method sum to take one argument and to return a sum of the argument and the instance variable @number.
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          test_var = LearnClass.new<br/>
+          > ArgumentError: wrong number of arguments (0 for 1)<br/>
+          test_var = LearnClass.new(5)<br/>
+          > #&lt;LearnClass:0x007abcc121abc9 @number=5&gt;<br/>
+          test_var.sum(3)<br/>
+          > 8<br/>
+          test_var.number<br/>
+          > NoMethodError: undefined method `number' for #&lt;LearnClass:0x007abcc121abc9 @number=5&gt;<br/>
+        </code>
+      </div>
+      <p>
+        We got an error when we tried to create a new instance of the class but passed it the wrong number of arguments required from the method initialize. The next line, we successfully created an instance of the class. Then we used the method sum and got "8". At the end, we tried to use "test_var.number". We can see that we don't have a method called number. Rather, number is the name of the instance variable but without the "@" sign in front. There is a reason I wrote this out. Let's continue..
+      </p>
+      <p>
+        In Ruby Classes, we have what are called <b>getter</b> and <b>setter</b> methods. These are used for instance variables in order to increase their scope outside of the class itself. Getter methods (AKA reader) are methods you can create to read what an instance variable is currently set to. Setter methods (AKA writer) are methods you can create to change what an instance variable is currently set to.
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          &nbsp;def initialize(number)<br/>
+          &nbsp;&nbsp;@number = number<br/>
+          &nbsp;end<br/>
+          <br/>
+          &nbsp;def number<br/>  # Reader
+          &nbsp;&nbsp;@number</br>
+          &nbsp;end<br/>
+          <br/>
+          &nbsp;def number=(num)<br/>  # Writer
+          &nbsp;&nbsp;@number = num</br>
+          &nbsp;end<br/>
+          end<br/>
+        </code>
+      </div>
+      <p></p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          test_var = LearnClass.new(5)<br/>
+          > #&lt;LearnClass:0x007abcc121abc9 @number=5&gt;<br/>
+          test_var.number<br/>
+          > 5<br/>
+          test_var.number = 10<br/>
+          > 10<br/>
+          test_var.number<br/>
+          > 10<br/>
+        </code>
+      </div>
+      <p>
+        We see that we can read what the instance variable is currently set to. We can also change what it equals. Reading it again returns the new value.
+      </p>
+      <p>
+        There are what they call "Syntactic Sugar", where there is a quicker way to write the reader and writter methods.
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          &nbsp; attr_reader :number<br/>
+          &nbsp; attr_writer :number<br/>
+          <br/>
+          &nbsp;def initialize(number)<br/>
+          &nbsp;&nbsp;@number = number<br/>
+          &nbsp;end<br/>
+          end<br/>
+        </code>
+      </div>
+      <p>
+        The "attr_reader" and "attr_writer" are quick ways of setting up getter and setter methods. Also, if you had multiple instance variables you would like to assign reader and writer methods to, you can simply write something like: "attr_reader :number, :other_stuff". You just require commas after each one.
+      </p>
+      <p>
+        There is an even quicker way to write both the reader and writer methods. It is called "attr_accessor".
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          class LearnClass<br/>
+          &nbsp; attr_accessor :number<br/>
+          <br/>
+          &nbsp;def initialize(number)<br/>
+          &nbsp;&nbsp;@number = number<br/>
+          &nbsp;end<br/>
+          end<br/>
+        </code>
+      </div>
+      <p>
+        A big question that arises at this point is, when do we use the reader and writer methods? Why don't we use them all the time? Why have an "attr_reader" and "attr_writer" when we have the "attr_accessor"?
+      </p>
+      <p>
+        The simplest answer to all these questions is scope. We know that if we didn't have a reader and writer method, the instance variable can only be used within the class. You won't be able to read the instance variable or set it to a new value outside of the class. Many times, you don't want people to be able to access and change this information. It all comes down to minimum accessibility for the user. That way, you can avoid users from changing important data you would have rather wanted protected or unchanged. I always view this concept as a hacker infiltrating a database. You obviously don't want this hacker to read and change your database. So you should limit the hackers ability to get inside, and that is to close the scope of these instance variables as much as you can. If the instance variable needs to be accessed outside of the class, then its ok. I'm sure that instance variable being changed and read is supposed to be like that and cannot really change the database as a whole. This is an extreme example, but I think it makes the concept easier to understand.
+      </p>
+      <p>
+        There are many more concepts with Ruby Classes. I hope to cover these other topics at a later time. Thanks for reading, and if you have any questions or have any recommended changes to this post, please contact me. Contact information is at the top of the page. Thanks!
+      </p>
+    </section>
+
+
+
+    <footer>
+      <!-- Twitter Button Code -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <!-- Facebook Button Code-Add -->
+      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
+    </footer>
+  </body>
+</html>
