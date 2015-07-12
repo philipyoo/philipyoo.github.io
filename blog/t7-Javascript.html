@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Philip Yoo | Javascript</title>
+    <meta charset="UTF-8">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css">
+  </head>
+  <body>
+    <!-- Facebook Button Code -->
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <h1 id="banner-name">Philip Yoo</h1>
+      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
+    </header>
+
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+    </nav>
+
+    <div class="max-width">
+      <p id="blog-title"><span>Title</span>: Getting into Javascript</p>
+      <p id="date-title"><span>Date</span>: July 12, 2015</p>
+      <div id="blog-links"><a href="c7-values.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="#">Next Post</a></div>
+    </div>
+
+    <section>
+      <p>
+        Delving into some Javascript this week, I realized many things. After learning Ruby, I realized: 1) a new language is faster to learn, 2) Javascript can get confusing since concepts can be similar but not completely, 3) running into several walls again and getting past them is the usual learning process in programming, and 4) the terminology differences can get confusing.
+      </p>
+      <p>
+        In this post, I will cover the similarities and differences in looping between Ruby and Javascript. The ever-so important looping is an essential part in programming. Although the concept of looping is shared, and although you will see similar looping styles (i.e. for loop and while loop), the syntax is completely different.
+      </p>
+      <p>
+        Loops I've had exposure to in Javascript are the `for` loop, `do/while` loop, and the `while` loop. First, the `for` loop:
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          var i;<br/>
+          for (i = 0; i < 4; i++) {<br/>
+            &nbsp;console.log(i);<br/>
+          };<br/>
+          <br/>
+          > 0<br/>
+          > 1<br/>
+          > 2<br/>
+          > 3<br/>
+        </code>
+      </div>
+      <p>
+        First, I defined `var i;`. The reason why i'm defining it outside of the loop, I read it was good practice to define it outside of the for loop definition for readability and scope purposes.
+      </p>
+      <p>
+        When defining a for loop, we see 3 arguments separated each by semicolons within parentheses. The first argument is to initialize the loop. The second argument is an expression that tests to see when to stop looping. The last argument updates the state of the loop after each iteration.
+      </p>
+      <p>
+        Some new syntax: parantheses surrounding arguments, squigly brackets that define the body of the loop, semicolons to separate the arguments or end a statement or body of code, `console.log` which prints to the terminal, and `i++` which is short for `i += 1`.
+      </p>
+      <p>
+        Now a look at Ruby's for loop:
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          for i in 0..3<br/>
+          &nbsp;puts i<br/>
+          end<br/>
+          <br/>
+          > 0<br/>
+          > 1<br/>
+          > 2<br/>
+          > 3<br/>
+        </code>
+      </div>
+      <p>
+        What I noticed with Javascript that it is more bulky. You can see the difference in these `for` loops. Also, although Ruby can use `for` loops, it is un-Ruby-like and should be avoided. Rather you should use another type of loop available in Ruby, like a `times` loop or an `each` loop.
+      </p>
+      <p>
+        Back to Javascript, we'll take a look at a while loop. The difference between a `do/while` and a `while` loop is that the `do/while` will always run the first iteration even if it doesn't fall within the conditionals set by the `while` portion of the loop. A `while` loop by itself will always first test to see if the current code falls within the conditionals set and will only go within the body of the `while` loop if met.
+      </p>
+      <p>
+        I'll first show the syntax for a `do/while` loop, but won't explain it in this blog. I just want to show you the syntax.
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          var num = [1, 2, 3];<br/>
+          var sum = 0;<br/>
+          do {<br/>
+            &nbsp;sum += num.pop();<br/>
+          } while (num.length > 0);<br/>
+          console.log(sum);<br/>
+          <br/>
+          > 6<br/>
+        </code>
+      </div>
+      <p>
+        So the example I used for the `do/while` loop probably isn't the best use-case for it. I just wanted to show the syntax used for it. Ok, now a look at a Javascript `while` loop:
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          var num = [1, 2, 3];<br/>
+          var sum = 0;<br/>
+          while (num.length > 0) {<br/>
+            &nbsp;sum += num.pop();<br/>
+          };<br/>
+          console.log(sum);<br/>
+          <br/>
+          > 6<br/>
+        </code>
+      </div>
+      <p>
+        In comparison, a Ruby while loop:
+      </p>
+      <div class="codeblock">
+        <code class="prettyprint">
+          num = [1, 2, 3]<br/>
+          sum = 0<br/>
+          while num.size > 0 do<br/>
+            &nbsp;sum += num.pop<br/>
+          end<br/>
+          puts sum<br/>
+          <br/>
+          > 6<br/>
+        </code>
+      </div>
+      <p>
+        While loops look very similar between the 2 languages. We see it takes a conditional, a body of code, and ends the body. While loops are nice to use when unsure of when the end goal will be met. I believe it is a nifty tool that is nice to use in both languages.
+      </p>
+      <p>
+        Ruby has several other loops that serve specific purposes, and I believe that Ruby code is less bulky. It requires less squigly brackets, less parantheses, no semicolons, etc. But, I understand the importance of Javascript and that it is essential in front-end web development.
+      </p>
+      <p>
+        I feel like I progressed well in the Javascript learning process. Still so much more to learn!
+      </p>
+    </section>
+
+
+
+    <footer>
+      <!-- Twitter Button Code -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <!-- Facebook Button Code-Add -->
+      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
+    </footer>
+  </body>
+</html>
