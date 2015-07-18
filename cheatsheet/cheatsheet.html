@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="cheatsheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron:400,700|Jura:400,600' rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="stylesheets/cheatsheet.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>
+        RADICAL SQL & CSS CHEATSHEET
+      </h1>
+    </header>
+    <section id="tips">
+      <section id="left">
+        <header><h1>SQL (Structured Query Language)</h1></header>
+          <table>
+            <tr>
+                <td class="table-title">
+                    COMMAND
+                </td>
+                <td class="table-title">
+                    Info
+                </td>
+                <td class="table-title">
+                    Example
+                </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    SELECT
+                </td>
+                <td>
+                    data type or column in table
+                </td>
+                <td>
+                    region_name
+                </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    FROM
+                </td>
+                <td>
+                    table name
+                </td>
+                <td>
+                    regions
+                </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    INNER JOIN
+                </td>
+                <td>
+                    join other table
+                </td>
+                <td>
+                    states
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-section">
+                    ON
+                </td>
+                <td class="sub-section">
+                    continuing the join
+                </td>
+                <td class="sub-section">
+                    regions.id = states.region_id
+                </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    WHERE
+                </td>
+                <td>
+                    conditional statement
+                </td>
+                <td>
+                    region_id = 3
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-section">
+                    BETWEEN x AND y
+                </td>
+                <td class="sub-section">
+                    conditional
+                </td>
+                <td class="sub-section">
+                    region_id BETWEEN 2 AND 4
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-section">
+                    LIKE
+                </td>
+                <td class="sub-section">
+                    search for specific pattern
+                </td>
+                <td class="sub-section">
+                    state_name LIKE "%aliforni%"
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-section">
+                    AND / OR
+                </td>
+                <td class="sub-section">
+                    conditional
+                </td>
+                <td class="sub-section">
+                    WHERE region_id = 3 AND state_name LIKE "%ar%"
+                </td>
+            </tr>
+            <tr>
+                <td class="command">
+                    ORDER BY
+                </td>
+                <td>
+                    order data
+                </td>
+                <td>
+                    region_id
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-section">
+                    DESC or ASC
+                </td>
+                <td class="sub-section">
+                    descending or ascending
+                </td>
+                <td class="sub-section">
+                    ORDER BY region_id DESC
+                </td>
+            </tr>
+        </table>
+        <header><h1>Misc Info</h1></header>
+        <section class="misc">
+
+        UPDATE - updates data in a database </br>
+        DELETE - deletes data from a database </br>
+            INSERT INTO - inserts new data into a database </br>
+        CREATE DATABASE - creates a new database </br>
+    ALTER DATABASE - modifies a database </br>
+    CREATE TABLE - creates a new table </br>
+    ALTER TABLE - modifies a table </br>
+    DROP TABLE - deletes a table </br>
+    CREATE INDEX - creates an index (search key) </br>
+    DROP INDEX - deletes an index --> </br>
+    END EVERYTHING WITH SEMICOLON </br>
+    .schema - shows table </br>
+    .exit - exits </br>
+    sqlite3 file_name.sqlite3 - opening and viewing a file </br>
+
+            </section>
+    </section>
+    <section id="right">
+        <header><h1> CSS (Cascading Style Sheets) </h1></header>
+
+        <img id="margin-img" src = "http://www.w3schools.com/css/box-model.gif">
+            <p>positioning<br/>
+    - static = default positioning<br/>
+    - relative = positioned relative to its normal position<br/>
+    - fixed = positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled<br/>
+                - absolute = positioned relative to the nearest positioned ancestor<br/></p>
+                    <p><a href="http://learnlayout.com/inline-block.html">Inline Blocks Example</a></p>
+
+    <p>id (#) vs class (.)</p>
+
+
+    </section>

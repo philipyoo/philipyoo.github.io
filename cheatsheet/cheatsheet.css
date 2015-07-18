@@ -1,0 +1,53 @@
+
+body {
+    background-color: #66FF66;
+}
+header{
+    background-color: #66FF66;
+    font-family: Orbitron, sans-serif;
+    text-align: center;
+}
+
+#left{
+    display: inline-block;
+    width: 45%;
+    float: left;
+}
+
+#right{
+    display: inline-block;
+    width: 45%;
+    float: right;
+}
+
+.table-title {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.table-title {
+    font-weight: bold;
+}
+
+
+td {
+    border: 1px black solid;
+}
+
+.table-name {
+    text-align: center;
+}
+
+.sub-section {
+    color: red;
+    font-size: 12px;
+}
+
+.misc {
+  font-size: 13px;
+}
+
+#margin-img {
+   margin: 10px;
+   width: 250px;
+}
