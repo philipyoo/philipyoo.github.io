@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Philip Yoo | Active Record</title>
+    <meta charset="UTF-8">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <link rel="stylesheet" type="text/css" href="../default.css">
+  </head>
+  <body>
+    <!-- Facebook Button Code -->
+    <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <h1 id="banner-name">Philip Yoo</h1>
+      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
+    </header>
+
+    <nav>
+      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+    </nav>
+
+    <div class="max-width">
+      <p id="blog-title"><span>Title</span>: What is Active Record?</p>
+      <p id="date-title"><span>Date</span>: July 19, 2015</p>
+      <div id="blog-links"><a href="c8-conflict.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="c8-conflict.html">Next Post</a></div>
+    </div>
+
+    <section>
+      <p>
+        Model-View-Controller (MVC) is a software architectural design where it splits roles into 3 sections. The model is the storage and use of data. The view is the visual appearance of the software. The controller can be seen as the middleman between the user and the users inputs with the software and its model and view.
+      </p>
+      <p>
+        Active Record is what Rails uses for its model portion of the MVC. What Active Record does is connect the Ruby objects to relational database tables, and therefore Active Record is essentially an object-relational map (ORM).
+      </p>
+      <p>
+        An ORM is simply a programming technique which helps convert incompatible types to types that can be used. Active Record makes every Rails developers lives easier by making translations between Ruby objects and the database.
+      </p>
+      <p>
+        Active Record is an essential tool that saves a developer time, decreases lines of code required, and makes Rails the great tool that it is. Looking forward to Rails!!
+      </p>
+    </section>
+
+
+
+    <footer>
+      <!-- Twitter Button Code -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <!-- Facebook Button Code-Add -->
+      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
+    </footer>
+  </body>
+</html>
