@@ -1,81 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Philip Yoo - About Me</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="default.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Philip Yoo - About Me</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+      <link rel="stylesheet" type="text/css" href="default.css">
+      <link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Architects+Daughter' rel='stylesheet' type='text/css'>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
   </head>
   <body>
-    <!-- Facebook Button Code -->
-    <div id="fb-root"></div>
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-    <header>
-      <h1 id="banner-name">Philip Yoo</h1>
-      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
-    </header>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
 
-    <nav>
-      <a href="index.html">Home</a> | <a href="about-me.html">About Me</a> | <a href="blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+        <div class="nav navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-text">
+          <ul class="navbar-nav nav-pills list-inline nav">
+            <li><a class="custom-size" href="https://github.com/philipyoo"><i class="fa fa-github"></i></a></li>
+            <li><a class="custom-size" href="https://twitter.com/philipYoo10"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="custom-size" href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20Cool" target="_top"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="custom-size" href="https://www.linkedin.com/pub/philip-yoo/21/8a9/789"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="nav collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="about-me.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog-index.html">Blog</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <section>
-      <h2>
-        <u>About Me:</u>
-      </h2>
+    <div class="jumbotron">
+      <h1 class="rock-salt"><span class="custom-color">About Philip Yoo</span></h1>
+    </div>
 
-      <div>
-        <img id='my_pic' src="philyoo.jpg"/>
+    <div class="container marketing">
+
+      <div class="row">
+        <div class="col-md-12">
+          <center><p><img id='my_pic' src="philyoo.jpg"></p></center>
+        </div>
+        <div class="col-md-6">
+          <h3>About Me</h3>
+          <p>Hello and thank you for dropping by! My name is Philip Yoo and I spent most of my life in San Diego, CA. I am currently attending Dev Bootcamp in San Francisco. As of now, I am considering studying to become a front-end web developer, but this may change as I continue to learn more about web development and programming.</p>
+       </div>
+       <div class="col-md-6">
+          <h3>Random Facts</h3>
+          <ul class="list-unstyled">
+            <li>
+              <i class="fa fa-angle-right"></i> I could live off of Burritos! (Seriously)
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> Huge fan of Milk Tea with Boba.
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> I enjoy playing Texas Hold'em Poker NL >:)
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> First programming language is Ruby.
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> Guilty Pleasures: Korean music and sports-related cartoons
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> Semi-Foodie?
+            </li>
+            <li>
+              <i class="fa fa-angle-right"></i> Coined the term "Philip Yoo is Awesome"
+            </li>
+          </ul>
+       </div>
       </div>
 
-      <p>
-        Hey guys and thanks for dropping by! My name is Philip Yoo and I am currently attending Dev Bootcamp in San Francisco. As of now, I am looking towards becoming a front-end web developer, but this may change as I continue to learn more about web development and programming.
-      </p>
+      <hr>
 
-      <u>Random fun facts:</u><br/>
-      <ul id='about_me'>
-        <li>
-          I could live off of Burritos! (Seriously)
-        </li>
-        <li>
-          Huge fan of Milk Tea with Boba
-        </li>
-        <li>
-          I enjoy playing Texas Hold'em Poker NL >:)
-        </li>
-        <li>
-          First programming language is Ruby. Have had exposure to HTML/CSS, Javascript, jQuery, Python, SQL, and Ruby on Rails.
-        </li>
-        <li>
-          Guilty Pleasures: Kpop music and sports-related cartoons
-        </li>
-        <li>
-          Semi-Foodie?
-        </li>
-        <li>
-          Coined the term "Philip Yoo is Awesome"
-        </li>
+      <footer>
+        <p>
+          &#169; 2015, Philip Yoo
+        </p>
+        <p>
+          Built using <a href="getbootstrap.com/">Bootstrap</a>, with button images from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, photos from <a href="www.pexels.com">Pexels</a>, font types from <a href="https://www.google.com/fonts">Google Fonts</a>, and some Vanilla CSS for a few customizations.
+        </p>
+      </footer>
 
-      </ul>
+    </div>
 
-    </section>
-
-
-
-    <footer>
-      <!-- Twitter Button Code -->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-      <!-- Facebook Button Code-Add -->
-      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
-    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+

@@ -1,67 +1,112 @@
-/*Main*/
 
-html {
-  font-family: 'Courier New', Courier, monospace;
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-a {
-  color: #3E687F;
-  text-decoration: none;
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
-a:visited {
-  color: #3E687F;
-  text-decoration: none;
+/* Custom page header */
+.header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
 }
 
-a:hover {
-  color: #268FCC;
-  text-decoration: underline;
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
-a:active {
-  color: red;
-  text-decoration: underline;
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
 }
 
-header {
-  border-style: inset;
-  border-color: #2793D1;
-  position: relative;
-}
-
-#banner-name {
-  font-size: 40pt;
-  font-family: Courier, monospace;
-  margin: 5px 10px 5px 10px;
-  padding-left: 40px;
-}
-
-#banner-text {
-  margin: 0px 0px 5px 0px;
-  padding-left: 50%;
-}
-
-nav {
+/* Main marketing message and sign up button */
+.jumbotron {
   text-align: center;
-  margin: 10px 0px 10px 0px;
-  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
 }
 
-section {
-  position: relative;
-  text-align: center;
-  margin: 25px 50px 10px 50px;
-  display: inline-block;
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
 }
 
-table {
-  margin-top: 20px;
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
 }
 
-td {
-  width: 50%;
-  padding: 25px;
+
+
+/*Customize*/
+.add-background {
+  background-image: url("https://static.pexels.com/photos/7106/macbook-computer-clean-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%, 50%;
+}
+
+.custom-color {
+  color: #D0D0D0;
+  text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  -moz-text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+  -webkit-text-shadow: -1px 0 black, 0 2px black, 1px 0 black, 0 -1px black;
+}
+
+.architect {
+  font-family: 'Architects Daughter', cursive;
+}
+
+.rock-salt {
+  font-family: 'Rock Salt', cursive;
+}
+
+.custom-size {
+  font-size: 150%;
 }
 
 #my_pic {
@@ -70,177 +115,11 @@ td {
   border-radius: 10px;
 }
 
-#about_me li {
-  font-size: 12pt;
-  margin-left: 20%;
-  width: 60%;
-  padding: 5px;
-}
-
-/*Blog Index*/
-
-.body-format {
-  position: relative;
-  margin: 10px auto;
-  width: 100%;
-  height: 300px;
-}
-
-#left-panel {
-  position: relative;
-  display: inline-block;
-  float: left;
-  top: 20%;
-  width: 30%;
-  border: 1px solid black;
-  overflow: auto;
-}
-
-#left-panel > p {
-  margin-bottom: 0;
-  position: relative;
-  float: right;
-  border: 1px solid black;
-}
-
-#left-scroll {
-  position: relative;
-  border: 1px solid black;
-  opacity: 0.7;
-  height: 10%;
-  top: 25%;
-  float: left;
-  overflow: auto;
-  overflow-x: hidden;
-  white-space: nowrap;
-}
-
-#wrapper {
-  border: 1px solid black;
-  display: inline-block;
-  position: relative;
-  float: right;
-  width: 60%;
-  height: 150%;
-  padding: 10px;
-}
-
-#bloglink-scrollbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-#bloglink-scrollbar > li {
-  font-size: 12pt;
-  margin: 5px;
-  padding: 5px;
-  text-align: left;
-  text-indent: none;
-  list-style: none;
-}
-
-#wrap-title {
-  position: relative;
-}
-
-#wrap-minis {
-  position: relative;
-  font-size: 10pt;
-}
-
-#wrap-link {
-  position: relative;
-}
-
-/*Blog Posts*/
-
-.max-width {
-  margin-top: 50px;
-  border: 1px #268FCC solid;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  float: center;
-  background-color: #F2F8FC;
-}
-
-span {
-  font-weight: bold;
-  font-size: 120%;
-}
-
-#blog-title {
-  font-size: 14pt;
-  text-align: left;
-  padding-left: 15px;
-  margin-bottom: 0px;
-}
-
-#date-title {
-  font-size: 10pt;
-  padding-left: 15px;
-  text-align: left;
-}
-
-#blog-links {
-  font-size: 9pt;
-  padding: 10px;
-  border: 1px #3E687F solid;
-  text-align: center;
-  vertical-align: center;
-  background-color: white;
-}
-
-.codeblock {
-  text-align: left;
-  padding: 10px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px black solid;
-  background-color: lightgray;
-  font-size: 90%;
-  font-family: 'Times New Roman', monospace;
-}
-
 li {
-  font-size: 9px;
-  text-align: left;
-  margin-left: 10%;
+  margin: 2px;
+  padding: 2px;
 }
 
-.form-format {
-  font-weight: bold;
+body {
+  padding-top: 80px;
 }
-
-
-footer {
-  border-style: outset;
-  border-color: #2793D1;
-  position: relative;
-  margin: 0px 0px 0px 5px;
-  padding: 10px;
-  text-align: center;
-}
-
-#twitter-share-button {
-  margin-right: 20px;
-}
-
-#fb-share-button {
-  margin-left: 20px;
-}
-
-
-/*Monochromatic color scheme
-
-#2793D1
-#7CCFFF
-#3083FF
-#3E687F
-#268FCC
-*/
-
-
-
