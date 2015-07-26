@@ -5,6 +5,7 @@ Github repository for my personal website including blog posts, about me section
 
 ### Things to work on:
 
++ Lower Photo size.
 + Update layout for Blog posts.
 + Update layout for Blog Index.
 + Add images/photos to Blog posts.
