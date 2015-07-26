@@ -1,158 +1,212 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Philip Yoo | Ruby Arrays and Hashes</title>
-    <meta charset="UTF-8">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" type="text/css" href="../default.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Philip Yoo | Ruby Arrays and Hashes</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+      <link rel="stylesheet" type="text/css" href="../default.css">
+      <link rel="stylesheet" type="text/css" href="../font-awesome-4.3.0/css/font-awesome.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Architects+Daughter' rel='stylesheet' type='text/css'>
+      <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
   </head>
   <body>
-    <!-- Facebook Button Code -->
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-    <header>
-      <h1 id="banner-name">Philip Yoo</h1>
-      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
-    </header>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
 
-    <nav>
-      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+        <div class="nav navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-text">
+          <ul class="navbar-nav nav-pills list-inline nav">
+            <li><a class="custom-size" href="https://github.com/philipyoo"><i class="fa fa-github"></i></a></li>
+            <li><a class="custom-size" href="https://twitter.com/philipYoo10"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="custom-size" href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20Cool" target="_top"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="custom-size" href="https://www.linkedin.com/pub/philip-yoo/21/8a9/789"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="nav collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about-me.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blog-index.html">Blog Index</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class="max-width">
-      <p id="blog-title"><span>Title</span>: Getting to Know Ruby's Array and Hash Objects</p>
-      <p id="date-title"><span>Date</span>: June 3, 2015</p>
-      <div id="blog-links"><a href="t2-css-design.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="c3-thinking-style.html">Next Post</a></div>
+    <div class="jumbotron">
+      <h1 class="rock-salt"><span class="custom-color">Philip's Blog</span></h1>
     </div>
 
-    <section>
-      <p>
-        Ruby is an object oriented programming language. That means that most everything in Ruby is an object. Strings are objects. Numbers (whether they be Integers or Floats) are objects. Those `true` or `false` things you see are objects as well.
-      </p>
-      <p>
-        And just like how all the above are objects, so are Arrays and Hashes. These 2 objects are really important parts of Ruby and you'll get to see why soon.
-      </p>
-      <p>
-        Let's start with Arrays. So first of all, what are Arrays anyways??
-      </p>
-      <p>
-        Arrays are Ruby objects that can store other Ruby objects. An analogy would be something like a refrigerator. Inside the fridge, you'll find various things like drinks, fruits & veggies, maybe some eggs, butter, and yesterday's leftovers. Well each of these items in the fridge are objects themselves. All the different types of drinks are Integers. All the different types of fruits are Boolean (true or false). Etc..
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          some_array = ["hello", 123, true, 7.0, "another string"]
-        </code>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h1>Getting to Know Ruby's Array and Hash Objects</h1>
+
+          <br/>
+
+          <p><span class="glyphicon glyphicon-time"></span> Posted on June 3, 2015</p>
+
+          <div class="well">
+            <center><a href="t2-css-design.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="c3-thinking-style.html">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <hr>
+
+          <p>
+            Ruby is an object oriented programming language. That means that most everything in Ruby is an object. Strings are objects. Numbers (whether they be Integers or Floats) are objects. Those `true` or `false` things you see are objects as well.
+          </p>
+          <p>
+            And just like how all the above are objects, so are Arrays and Hashes. These 2 objects are really important parts of Ruby and you'll get to see why soon.
+          </p>
+          <p>
+            Let's start with Arrays. So first of all, what are Arrays anyways??
+          </p>
+          <p>
+            Arrays are Ruby objects that can store other Ruby objects. An analogy would be something like a refrigerator. Inside the fridge, you'll find various things like drinks, fruits & veggies, maybe some eggs, butter, and yesterday's leftovers. Well each of these items in the fridge are objects themselves. All the different types of drinks are Integers. All the different types of fruits are Boolean (true or false). Etc..
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              some_array = ["hello", 123, true, 7.0, "another string"]
+            </code>
+          </div>
+          <p>
+            Above is an example of an Array. An Array is always surrounded by [ brackets ]. Inside the brackets, we see that there are several different types of objects: Strings, Integer, Boolean value, and Float. Each object in an Array has an <b>index</b>. Indexes are basically integers that show you the position of objects inside the Array. Using the same `some_array` Array above:
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              some_array[0]<br/>
+              > "hello"<br/>
+              some_array[2]<br/>
+              > true<br/>
+              some_array[4]<br/>
+              > "another string"<br/>
+              some_array[-1]<br/>
+              > "another string"<br/>
+              some_array[5]<br/>
+              > nil<br/>
+              some_array[-2]<br/>
+              > 7.0
+            </code>
+          </div>
+          <p>
+            You can pull up an object in an Array using the above. Indexes are a little weird since they start counting from 0. So calling on index 0 on `some_array` will return the first object in the array, which is "hello". The next index would be 1, and that would return the second object in the array, which is 123. If you look a few examples below, there is `some_array[-1]`. You can count backwards starting from -1, which will always return the last object in the Array. So `some_array[-1]` returns last object "another string". Using `some_array[-2]` will return the second to last object in the array, and you can continue to count backwards to return the next object from the back (i.e. -3, -4, etc..). Using an index that doesn't exist in the array will return nil, which we can see from trying out `some_array[5]`.
+          </p>
+          <p>
+            There is really no limit to how much an Array can hold inside. You can even have another Array or even a Hash inside.
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              an_array = ["time for an array", ["this other array inside", 123, true], "outside again"]<br/>
+              an_array[1]<br/>
+              > ["this other array inside", 123, true]<br/>
+              an_array[1][1]<br/>
+              > 123
+            </code>
+          </div>
+          <p>
+            We see that `an_array` has a bunch of objects inside, including another array which also has a bunch of objects inside itself. When we pull the index of the inside array, we see that it returns that entire array. This is because the array itself is an object. So the index returns the entire object. When we try `an_array[1][1]`, we get the index of the inside array, and then the index 1 of that inside array, so it pulls a specific object within the inside array. Cool and super powerful stuff here.
+          </p>
+          <p>
+            So, I've been constantly talking and showing you an Array and how it can store things inside and how you can call on things from an Array. But, why is this so important? Why do we even need an Array? A big part of programming involves using objects to get other objects, or using objects and storing them somewhere so we can use them again later. Arrays are simply storage spots to store data that you plan on using again later.
+          </p>
+          <p>
+            Ok, so Arrays are like storage spots. What are Hashes then? Hashes are similar to Arrays, except that Hashes use what are called <b>key/value pairs</b>. For every key, there will be a value associated with it. Let's take a look at a Hash syntax.
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              a_hash = {<br/>
+                &nbsp;"some string" => 123,<br/>
+                &nbsp;3 => true,<br/>
+                &nbsp;:some_symbol => "cool beans"<br/>
+              }
+            </code>
+          </div>
+          <p>
+            Hashes are surrounded by { these } squigly brackets. The reason why I formatted my Hash like this is so that it is easier to read. I think this is a good best practice to follow, especially if you have a very large Hash.
+          </p>
+          <p>
+            Hashes always have the key on the left-side, their values on the right-side, and both are separated by "=>". We can also see that each key/value pair is separated by a comma. Hashes are like Arrays in that they store data and objects of any kind, and each stored data has a value assigned to them. We can pull the value of a key like so:
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              a_hash["some string"]<br/>
+              > 123<br/>
+              a_hash[:some_symbol]<br/>
+              > "cool beans"
+            </code>
+          </div>
+          <p>
+            Instead of using indexes like we did for Arrays, we use a Hash by calling the key in order to pull out the value. Hashes have a lot of real-life uses for programs. A good example would be storing information about an individual. Let's say you have a Facebook account and you filled in a form with all your information:<br/>
+            <ul>
+              <li> <span class="form-format">Name<span>: Philip Yoo</li>
+              <li> <span class="form-format">Gender<span>: Coffee</li>
+              <li> <span class="form-format">Location<span>: CA</li>
+              <li> <span class="form-format">Age<span>: Used to be 10 years old</li>
+            </ul><br/>
+            Well, when we fill out these forms, they can be stored in a Hash. So the above information will translate to:
+          </p>
+          <div class="codeblock">
+            <code class="prettyprint">
+              user_2317 {<br/>
+                &nbsp;:name => "Philip Yoo",<br/>
+                &nbsp;:gender => "Coffee",<br/>
+                &nbsp;:location => "CA",<br/>
+                &nbsp;:age => "Used to be 10 years old"<br/>
+              }
+            </code>
+          </div>
+          <p>
+            What is so great about the above Hash translation? Well, you have all these different fields (i.e. name, gender, etc) and it will store the user information and save this data for the user. For organization purposes, the keys will all be the same, while the values will be what is unique for each user. This is a great tool which will undoubtedly be used many times when you are programming.
+          </p>
+          <p>
+            This is all I have for now on Ruby Arrays and Hashes. I hope this helped as much as it helped me. Thanks for reading.
+          </p>
+
+          <hr>
+
+          <div class="well">
+            <center><a href="t2-css-design.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="c3-thinking-style.html">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <!-- Comments Section: -->
+        </div>
       </div>
-      <p>
-        Above is an example of an Array. An Array is always surrounded by [ brackets ]. Inside the brackets, we see that there are several different types of objects: Strings, Integer, Boolean value, and Float. Each object in an Array has an <b>index</b>. Indexes are basically integers that show you the position of objects inside the Array. Using the same `some_array` Array above:
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          some_array[0]<br/>
-          > "hello"<br/>
-          some_array[2]<br/>
-          > true<br/>
-          some_array[4]<br/>
-          > "another string"<br/>
-          some_array[-1]<br/>
-          > "another string"<br/>
-          some_array[5]<br/>
-          > nil<br/>
-          some_array[-2]<br/>
-          > 7.0
-        </code>
-      </div>
-      <p>
-        You can pull up an object in an Array using the above. Indexes are a little weird since they start counting from 0. So calling on index 0 on `some_array` will return the first object in the array, which is "hello". The next index would be 1, and that would return the second object in the array, which is 123. If you look a few examples below, there is `some_array[-1]`. You can count backwards starting from -1, which will always return the last object in the Array. So `some_array[-1]` returns last object "another string". Using `some_array[-2]` will return the second to last object in the array, and you can continue to count backwards to return the next object from the back (i.e. -3, -4, etc..). Using an index that doesn't exist in the array will return nil, which we can see from trying out `some_array[5]`.
-      </p>
-      <p>
-        There is really no limit to how much an Array can hold inside. You can even have another Array or even a Hash inside.
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          an_array = ["time for an array", ["this other array inside", 123, true], "outside again"]<br/>
-          an_array[1]<br/>
-          > ["this other array inside", 123, true]<br/>
-          an_array[1][1]<br/>
-          > 123
-        </code>
-      </div>
-      <p>
-        We see that `an_array` has a bunch of objects inside, including another array which also has a bunch of objects inside itself. When we pull the index of the inside array, we see that it returns that entire array. This is because the array itself is an object. So the index returns the entire object. When we try `an_array[1][1]`, we get the index of the inside array, and then the index 1 of that inside array, so it pulls a specific object within the inside array. Cool and super powerful stuff here.
-      </p>
-      <p>
-        So, I've been constantly talking and showing you an Array and how it can store things inside and how you can call on things from an Array. But, why is this so important? Why do we even need an Array? A big part of programming involves using objects to get other objects, or using objects and storing them somewhere so we can use them again later. Arrays are simply storage spots to store data that you plan on using again later.
-      </p>
-      <p>
-        Ok, so Arrays are like storage spots. What are Hashes then? Hashes are similar to Arrays, except that Hashes use what are called <b>key/value pairs</b>. For every key, there will be a value associated with it. Let's take a look at a Hash syntax.
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          a_hash = {<br/>
-            &nbsp;"some string" => 123,<br/>
-            &nbsp;3 => true,<br/>
-            &nbsp;:some_symbol => "cool beans"<br/>
-          }
-        </code>
-      </div>
-      <p>
-        Hashes are surrounded by { these } squigly brackets. The reason why I formatted my Hash like this is so that it is easier to read. I think this is a good best practice to follow, especially if you have a very large Hash.
-      </p>
-      <p>
-        Hashes always have the key on the left-side, their values on the right-side, and both are separated by "=>". We can also see that each key/value pair is separated by a comma. Hashes are like Arrays in that they store data and objects of any kind, and each stored data has a value assigned to them. We can pull the value of a key like so:
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          a_hash["some string"]<br/>
-          > 123<br/>
-          a_hash[:some_symbol]<br/>
-          > "cool beans"
-        </code>
-      </div>
-      <p>
-        Instead of using indexes like we did for Arrays, we use a Hash by calling the key in order to pull out the value. Hashes have a lot of real-life uses for programs. A good example would be storing information about an individual. Let's say you have a Facebook account and you filled in a form with all your information:<br/>
-        <ul>
-          <li> <span class="form-format">Name<span>: Philip Yoo</li>
-          <li> <span class="form-format">Gender<span>: Coffee</li>
-          <li> <span class="form-format">Location<span>: CA</li>
-          <li> <span class="form-format">Age<span>: Used to be 10 years old</li>
-        </ul><br/>
-        Well, when we fill out these forms, they can be stored in a Hash. So the above information will translate to:
-      </p>
-      <div class="codeblock">
-        <code class="prettyprint">
-          user_2317 {<br/>
-            &nbsp;:name => "Philip Yoo",<br/>
-            &nbsp;:gender => "Coffee",<br/>
-            &nbsp;:location => "CA",<br/>
-            &nbsp;:age => "Used to be 10 years old"<br/>
-          }
-        </code>
-      </div>
-      <p>
-        What is so great about the above Hash translation? Well, you have all these different fields (i.e. name, gender, etc) and it will store the user information and save this data for the user. For organization purposes, the keys will all be the same, while the values will be what is unique for each user. This is a great tool which will undoubtedly be used many times when you are programming.
-      </p>
-      <p>
-        This is all I have for now on Ruby Arrays and Hashes. I hope this helped as much as it helped me. Thanks for reading.
-      </p>
-    </section>
 
 
+      <hr>
 
-    <footer>
-      <!-- Twitter Button Code -->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <footer>
+        <p>
+          &#169; 2015, Philip Yoo
+        </p>
+        <p>
+          Built using <a href="getbootstrap.com/">Bootstrap</a>, with button images from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, photos from <a href="www.pexels.com">Pexels</a>, font types from <a href="https://www.google.com/fonts">Google Fonts</a>, and some Vanilla CSS for a few customizations.
+        </p>
+      </footer>
+    </div>
 
-      <!-- Facebook Button Code-Add -->
-      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
-    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+

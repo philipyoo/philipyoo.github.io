@@ -1,91 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Philip Yoo | Ruby Classes vs Modules</title>
-    <meta charset="UTF-8">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" type="text/css" href="../default.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Philip Yoo | Ruby Classes vs Modules</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+      <link rel="stylesheet" type="text/css" href="../default.css">
+      <link rel="stylesheet" type="text/css" href="../font-awesome-4.3.0/css/font-awesome.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Architects+Daughter' rel='stylesheet' type='text/css'>
+      <!-- prettify update? -->
+      <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
   </head>
   <body>
-    <!-- Facebook Button Code -->
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-    <header>
-      <h1 id="banner-name">Philip Yoo</h1>
-      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
-    </header>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
 
-    <nav>
-      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+        <div class="nav navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-text">
+          <ul class="navbar-nav nav-pills list-inline nav">
+            <li><a class="custom-size" href="https://github.com/philipyoo"><i class="fa fa-github"></i></a></li>
+            <li><a class="custom-size" href="https://twitter.com/philipYoo10"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="custom-size" href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20Cool" target="_top"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="custom-size" href="https://www.linkedin.com/pub/philip-yoo/21/8a9/789"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="nav collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about-me.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blog-index.html">Blog Index</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class="max-width">
-      <p id="blog-title"><span>Title</span>: Ruby Classes vs Modules</p>
-      <p id="date-title"><span>Date</span>: July 1, 2015</p>
-      <div id="blog-links"><a href="c6-stereotype-threat.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="c7-values.html">Next Post</a></div>
+    <div class="jumbotron">
+      <h1 class="rock-salt"><span class="custom-color">Philip's Blog</span></h1>
     </div>
 
-    <section>
-      <p>
-        Ruby Classes are convenient ways to group together multiple methods and constants. They include many unique objects that aren't required to use, but are there for convenience.
-      </p>
-      <p>
-        There is the initialize method, which is unique compared to other methods you may run into. You can only have one of this initialize method per class, and its main purpose is to run whatever is within the initialize method before you run anything else in the class. So just like its name, it initializes the instance of the class.
-      </p>
-      <p>
-        There are attr reader and attr writer methods. These are more just syntactic sugar. Rather than typing out the full method, you are provided a short-cut way of creating these methods. Just like their names imply, reader methods provide the ability to read instance variables and their current values. Writer methods provide the ability to change the value of an instance variable outside of the class. There is also the attr accessor method which is another syntactic sugar, and will combine both reader and writer methods into one.
-      </p>
-      <p>
-        Why would we want to group methods together?
-      </p>
-      <p>
-        Well, imagine you had thousands of lines of code. It's going to literally become a nightmare trying to track things down. You need to figure out which message each method is sending, what variables are currently set to, you will probably have hundreds of different variables everywhere, and you will probably have hundreds of different (some repetitive) names. These are just a few of the problems you will likely run into.
-      </p>
-      <p>
-        Classes are convenient for organization. Although classes are objects themselves, they also create other objects. These objects that they create, we typically call them instances of the class. If we had a class called `Ninja`, we would probably see methods like `throw_ninja_star`, `use_sword`, `disappear`, etc. When we create an instance of this class, we would do something like: `philip = Ninja.new`. In this case, `philip` is now a new instance of class Ninja, and it has the ability to call on many of the methods in that class. Also, instance of `philip` is separate form instances of other `Ninja`s.
-      </p>
-      <p>
-        What are Ruby Modules?
-      </p>
-      <p>
-        Ruby Modules may seem similar to classes, except they can't create instances of the module and they can't create new objects. Modules are typically used to store classes, methods, and constants, and are really great for organization purposes as well.
-      </p>
-      <p>
-        Modules are what they call a mixin in Ruby. Ruby is an object-oriented programming language, meaning most everything in Ruby is considered an object. But, Ruby is a single inheritance language, whereas many other object-oriented languages are multiple inhertiance languages. So in Ruby, objects can inherit from another object (i.e. Ninja class can inherit from Person class) and take in all of the objects and be able to use them. However, objects cannot inherit from more than one object.
-      </p>
-      <p>
-        This is where Modules come in handy for Ruby. Rather than being restricted from what you inherit from, you have the ability to include different Modules (mixin the Module) so that your objects can not only inherit from another object, but they can also include different types of properties provided by Modules.
-      </p>
-      <p>
-        Mentioned before, Modules can store classes. This is a convenience you will see when your code gets really long. Since we can store classes within Modules, this brings about a topic called Namespacing.
-      </p>
-      <p>
-        Basically, you are going to have tons of different method names, variable names, constants, etc. Namespacing means that even though you may use the same names, whether it be a method, variable, or constant, placing these same names within a module allows them to live separately from their shared name in say another module or class or globally.
-      </p>
-      <p>
-        As an example, say you have a module called `Clan` with a constant inside it called `Stark`. Also, you have a global constant in your program (outside of modules `Clan`) called `Stark` as well. Calling on the global constant, you would just need to type out `Stark`. Calling on the constant inside the module, you would need to type out `Clan::Stark`. Both of these constants may share the same name, but they are different objects.
-      </p>
-      <p>
-        That's all I have on this topic for now. I think it's time to watch some Game of Thrones. See ya!
-      </p>
-    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h1>Ruby Classes vs Modules</h1>
+
+          <br/>
+
+          <p><span class="glyphicon glyphicon-time"></span> Posted on July 1, 2015</p>
+
+          <div class="well">
+            <center><a href="c6-stereotype-threat.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="c7-values.html">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <hr>
+
+          <p>
+            Ruby Classes are convenient ways to group together multiple methods and constants. They include many unique objects that aren't required to use, but are there for convenience.
+          </p>
+          <p>
+            There is the initialize method, which is unique compared to other methods you may run into. You can only have one of this initialize method per class, and its main purpose is to run whatever is within the initialize method before you run anything else in the class. So just like its name, it initializes the instance of the class.
+          </p>
+          <p>
+            There are attr reader and attr writer methods. These are more just syntactic sugar. Rather than typing out the full method, you are provided a short-cut way of creating these methods. Just like their names imply, reader methods provide the ability to read instance variables and their current values. Writer methods provide the ability to change the value of an instance variable outside of the class. There is also the attr accessor method which is another syntactic sugar, and will combine both reader and writer methods into one.
+          </p>
+          <p>
+            Why would we want to group methods together?
+          </p>
+          <p>
+            Well, imagine you had thousands of lines of code. It's going to literally become a nightmare trying to track things down. You need to figure out which message each method is sending, what variables are currently set to, you will probably have hundreds of different variables everywhere, and you will probably have hundreds of different (some repetitive) names. These are just a few of the problems you will likely run into.
+          </p>
+          <p>
+            Classes are convenient for organization. Although classes are objects themselves, they also create other objects. These objects that they create, we typically call them instances of the class. If we had a class called `Ninja`, we would probably see methods like `throw_ninja_star`, `use_sword`, `disappear`, etc. When we create an instance of this class, we would do something like: `philip = Ninja.new`. In this case, `philip` is now a new instance of class Ninja, and it has the ability to call on many of the methods in that class. Also, instance of `philip` is separate form instances of other `Ninja`s.
+          </p>
+          <p>
+            What are Ruby Modules?
+          </p>
+          <p>
+            Ruby Modules may seem similar to classes, except they can't create instances of the module and they can't create new objects. Modules are typically used to store classes, methods, and constants, and are really great for organization purposes as well.
+          </p>
+          <p>
+            Modules are what they call a mixin in Ruby. Ruby is an object-oriented programming language, meaning most everything in Ruby is considered an object. But, Ruby is a single inheritance language, whereas many other object-oriented languages are multiple inhertiance languages. So in Ruby, objects can inherit from another object (i.e. Ninja class can inherit from Person class) and take in all of the objects and be able to use them. However, objects cannot inherit from more than one object.
+          </p>
+          <p>
+            This is where Modules come in handy for Ruby. Rather than being restricted from what you inherit from, you have the ability to include different Modules (mixin the Module) so that your objects can not only inherit from another object, but they can also include different types of properties provided by Modules.
+          </p>
+          <p>
+            Mentioned before, Modules can store classes. This is a convenience you will see when your code gets really long. Since we can store classes within Modules, this brings about a topic called Namespacing.
+          </p>
+          <p>
+            Basically, you are going to have tons of different method names, variable names, constants, etc. Namespacing means that even though you may use the same names, whether it be a method, variable, or constant, placing these same names within a module allows them to live separately from their shared name in say another module or class or globally.
+          </p>
+          <p>
+            As an example, say you have a module called `Clan` with a constant inside it called `Stark`. Also, you have a global constant in your program (outside of modules `Clan`) called `Stark` as well. Calling on the global constant, you would just need to type out `Stark`. Calling on the constant inside the module, you would need to type out `Clan::Stark`. Both of these constants may share the same name, but they are different objects.
+          </p>
+          <p>
+            That's all I have on this topic for now. I think it's time to watch some Game of Thrones. See ya!
+          </p>
+
+          <hr>
+
+          <div class="well">
+            <center><a href="c6-stereotype-threat.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="c7-values.html">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <!-- Comments Section: -->
+        </div>
+      </div>
 
 
+      <hr>
 
-    <footer>
-      <!-- Twitter Button Code -->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <footer>
+        <p>
+          &#169; 2015, Philip Yoo
+        </p>
+        <p>
+          Built using <a href="getbootstrap.com/">Bootstrap</a>, with button images from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, photos from <a href="www.pexels.com">Pexels</a>, font types from <a href="https://www.google.com/fonts">Google Fonts</a>, and some Vanilla CSS for a few customizations.
+        </p>
+      </footer>
+    </div>
 
-      <!-- Facebook Button Code-Add -->
-      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
-    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+

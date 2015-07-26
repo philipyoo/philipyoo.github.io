@@ -1,61 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Philip Yoo | Active Record</title>
-    <meta charset="UTF-8">
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-    <link rel="stylesheet" type="text/css" href="../default.css">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <title>Philip Yoo | Active Record</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+      <link rel="stylesheet" type="text/css" href="../default.css">
+      <link rel="stylesheet" type="text/css" href="../font-awesome-4.3.0/css/font-awesome.min.css">
+      <link href='http://fonts.googleapis.com/css?family=Rock+Salt|Architects+Daughter' rel='stylesheet' type='text/css'>
+      <!-- prettify update? -->
+      <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/yeti/bootstrap.min.css">
   </head>
   <body>
-    <!-- Facebook Button Code -->
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
 
-    <header>
-      <h1 id="banner-name">Philip Yoo</h1>
-      <h3 id="banner-text">Typing out stuff that seems cool.</h3>
-    </header>
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
 
-    <nav>
-      <a href="../index.html">Home</a> | <a href="../about-me.html">About Me</a> | <a href="../blog-index.html">Blog</a> | <a href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20cool" target="_top">Contact Me</a>
+        <div class="nav navbar-header pull-right">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-text">
+          <ul class="navbar-nav nav-pills list-inline nav">
+            <li><a class="custom-size" href="https://github.com/philipyoo"><i class="fa fa-github"></i></a></li>
+            <li><a class="custom-size" href="https://twitter.com/philipYoo10"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="custom-size" href="mailto:philipyoo10@gmail.com?Subject=Philip%20is%20Cool" target="_top"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="custom-size" href="https://www.linkedin.com/pub/philip-yoo/21/8a9/789"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div class="nav collapse navbar-collapse navbar-right" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about-me.html">About</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blog-index.html">Blog Index</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
-    <div class="max-width">
-      <p id="blog-title"><span>Title</span>: What is Active Record?</p>
-      <p id="date-title"><span>Date</span>: July 19, 2015</p>
-      <div id="blog-links"><a href="c8-conflict.html">Previous Post</a> | <a href="../blog-index.html">Back to Index</a> | <a href="#">Next Post</a></div>
+    <div class="jumbotron">
+      <h1 class="rock-salt"><span class="custom-color">Philip's Blog</span></h1>
     </div>
 
-    <section>
-      <p>
-        Model-View-Controller (MVC) is a software architectural design where it splits roles into 3 sections. The model is the storage and use of data. The view is the visual appearance of the software. The controller can be seen as the middleman between the user and the users inputs with the software and its model and view.
-      </p>
-      <p>
-        Active Record is what Rails uses for its model portion of the MVC. What Active Record does is connect the Ruby objects to relational database tables, and therefore Active Record is essentially an object-relational map (ORM).
-      </p>
-      <p>
-        An ORM is simply a programming technique which helps convert incompatible types to types that can be used. Active Record makes every Rails developers lives easier by making translations between Ruby objects and the database.
-      </p>
-      <p>
-        Active Record is an essential tool that saves a developer time, decreases lines of code required, and makes Rails the great tool that it is. Looking forward to Rails!!
-      </p>
-    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <h1>What is Active Record?</h1>
+
+          <br/>
+
+          <p><span class="glyphicon glyphicon-time"></span> Posted on July 19, 2015</p>
+
+          <div class="well">
+            <center><a href="c8-conflict.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="#">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <hr>
+
+          <p>
+            Model-View-Controller (MVC) is a software architectural design where it splits roles into 3 sections. The model is the storage and use of data. The view is the visual appearance of the software. The controller can be seen as the middleman between the user and the users inputs with the software and its model and view.
+          </p>
+          <p>
+            Active Record is what Rails uses for its model portion of the MVC. What Active Record does is connect the Ruby objects to relational database tables, and therefore Active Record is essentially an object-relational map (ORM).
+          </p>
+          <p>
+            An ORM is simply a programming technique which helps convert incompatible types to types that can be used. Active Record makes every Rails developers lives easier by making translations between Ruby objects and the database.
+          </p>
+          <p>
+            Active Record is an essential tool that saves a developer time, decreases lines of code required, and makes Rails the great tool that it is. Looking forward to Rails!!
+          </p>
+
+          <hr>
+
+          <div class="well">
+            <center><a href="c8-conflict.html"><i class="fa fa-chevron-left"></i> Previous Post</a> | <a href="#">Next Post <i class="fa fa-chevron-right"></i></a></center>
+          </div>
+
+          <!-- Comments Section: -->
+        </div>
+      </div>
 
 
+      <hr>
 
-    <footer>
-      <!-- Twitter Button Code -->
-      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Philip Yoo's Site" data-via="philipYoo10">Tweet</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <footer>
+        <p>
+          &#169; 2015, Philip Yoo
+        </p>
+        <p>
+          Built using <a href="getbootstrap.com/">Bootstrap</a>, with button images from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>, photos from <a href="www.pexels.com">Pexels</a>, font types from <a href="https://www.google.com/fonts">Google Fonts</a>, and some Vanilla CSS for a few customizations.
+        </p>
+      </footer>
+    </div>
 
-      <!-- Facebook Button Code-Add -->
-      <div class="fb-share-button" data-href="https://philipyoo.github.io/" data-layout="button_count"></div>
-    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
+
+

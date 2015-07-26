@@ -5,15 +5,17 @@ Github repository for my personal website including blog posts, about me section
 
 ### Things to work on:
 
++ Prettify in-text code.
+  + Check all technical posts.
 + Lower Photo size.
 + Update layout for Blog posts.
   + Side Well
   + Search by Topic
   + Index of All Posts (Timeline or Category)
-+ Update layout for Blog Index.
-+ Add images/photos to Blog posts.
+  + Add Images
+  + Add Comment Section
++ Add Layout for Blog Index.
 + Fix Navigation Bar height.
-+ Add comment section for Blogs.
 + Add favicon image for site.
 + Work on Projects Page.
 + Fade In/Fade Out Nav Bar when scrolling
