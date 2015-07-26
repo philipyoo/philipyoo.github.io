@@ -7,7 +7,6 @@ Github repository for my personal website including blog posts, about me section
 
 + Prettify in-text code.
   + Check all technical posts.
-+ Lower Photo size.
 + Update layout for Blog posts.
   + Side Well
   + Search by Topic
