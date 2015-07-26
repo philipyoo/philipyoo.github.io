@@ -13,6 +13,9 @@ Github repository for my personal website including blog posts, about me section
   + Index of All Posts (Timeline or Category)
   + Add Images
   + Add Comment Section
+  + Space more between lines
+  + Consider making larger font
+  + Lower blog titles to h2
 + Add Layout for Blog Index.
 + Fix Navigation Bar height.
 + Add favicon image for site.
