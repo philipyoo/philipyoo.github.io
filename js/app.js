@@ -10,26 +10,31 @@ $(document).ready(function() {
     return check;
   }
 
-  if (window.mobilecheck) {
-    location.replace("http://philipyoo.github.io/mobile.html")
+  if (window.mobilecheck()) {
+    //TODO: Replace url after
+    // location.replace("http://philipyoo.github.io/mobile.html")
+    location.replace("file:///Users/philipyoo/Desktop/philipyoo.github.io/mobile.html")
+  } else {
+
+
+    jQuery(function($, undefined) {
+      $('#philips-term').terminal(function(command, term) {
+        if (command === "test") {
+          term.echo("Email: philipyoo10@gmail.com");
+        } else {
+          term.echo("Unknown command")
+        }
+
+      }, {
+          greetings: "Welcome to Philip Yoo's Computer\n"+
+                     "Use `[[guib;<blue>]help]` for a list of commands",
+          name: "Philip's Terminal",
+          height: 300,
+          width: 500,
+          prompt: 'philipyoo> '
+      });
+    });
+
   }
 
-
-  jQuery(function($, undefined) {
-    $('#philips-term').terminal(function(command, term) {
-      if (command === "test") {
-        term.echo("Email: philipyoo10@gmail.com");
-      } else {
-        term.echo("Unknown command")
-      }
-
-    }, {
-        greetings: "Welcome to Philip Yoo's Computer\n"+
-                   "Use `[[guib;<blue>]help]` for a list of commands",
-        name: "Philip's Terminal",
-        height: 300,
-        width: 500,
-        prompt: 'philipyoo> '
-    });
-  });
 })
