@@ -1,24 +1,17 @@
 # [philipyoo.github.io](http://philipyoo.github.io)
 
-Github repository for my personal website including blog posts, about me section, and contact information.
+Github repository for my personal website.
 
 
 ### Things to work on:
 
-+ Prettify in-text code.
-  + Check all technical posts.
-+ Update layout for Blog posts.
-  + Side Well
-  + Search by Topic
-  + Index of All Posts (Timeline or Category)
-  + Add Images
-  + Add Comment Section
-  + Space more between lines
-  + Consider making larger font
-  + Lower blog titles to h2
-+ Add Layout for Blog Index.
-+ Fix Navigation Bar height.
++ Add jQuery Terminal code.
++ Work on json information.
++ Add Head banner.
++ Include Social Media Buttons (including Blogger).
++ Add resume - both via terminal and downloadable.
++ Update layout, prettify it man!
++ Add mobile version.
++ Consider color scheme.
++ Add credits and technologies used.
 + Add favicon image for site.
-+ Work on Projects Page.
-+ Fade In/Fade Out Nav Bar when scrolling
-+ Consider color scheme for next layout.
