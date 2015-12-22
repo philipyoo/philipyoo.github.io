@@ -1,0 +1,9 @@
+html body {
+    min-width: 200px;
+    width: auto !important;
+    width: 200px;
+}
+
+.callout.centered {
+  text-align: center;
+}
