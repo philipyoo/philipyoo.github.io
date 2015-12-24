@@ -29,8 +29,6 @@ $(document).ready(function() {
           greetings: "Welcome to Philip Yoo's Computer\n"+
                      "Use `[[guib;<blue>]help]` for a list of commands",
           name: "Philip's Terminal",
-          height: 300,
-          width: 500,
           prompt: 'philipyoo> '
       });
     });
