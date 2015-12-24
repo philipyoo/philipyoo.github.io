@@ -12,8 +12,8 @@ $(document).ready(function() {
 
   if (window.mobilecheck()) {
     //TODO: Replace url after
-    // location.replace("http://philipyoo.github.io/mobile.html")
-    location.replace("file:///Users/philipyoo/Desktop/philipyoo.github.io/mobile.html")
+    location.replace("http://philipyoo.github.io/mobile.html")
+    // location.replace("file:///Users/philipyoo/Desktop/philipyoo.github.io/mobile.html")
   } else {
 
 
