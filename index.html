@@ -13,7 +13,7 @@
 
     <div class="off-canvas-wrapper">
       <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-        <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+        <div class="off-canvas position-left reveal-for-medium" id="my-info" data-off-canvas data-position="left">
           <div class="row column">
             <br>
             <img class="thumbnail" src="http://placehold.it/550x350">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="off-canvas-content" data-off-canvas-content>
-          <div class="title-bar hide-for-large">
+          <div class="title-bar hide-for-medium">
             <div class="title-bar-left">
               <button class="menu-icon" type="button" data-open="my-info"></button>
 
@@ -31,20 +31,17 @@
             </div>
           </div>
 
-          <div class="row bg-color">
-            <div class="medium-6 columns">
-              <div class="hidden-for-small-only" id="philips-term"></div>
+          <div class="row">
+            <div class="medium-6 columns desktop">
+              <div id="philips-term"></div>
+            </div>
 
-              <div class="hidden-for-medium-up">
-                <p>This is a test for mobile using foundation</p>
-
-                <br/><br/>
-
-                <p>Did it work?</p>
-              </div>
+            <div class="medium-6 columns mobile">
+              <p>This should only be seen via mobile</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
 
