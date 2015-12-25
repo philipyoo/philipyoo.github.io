@@ -7,11 +7,14 @@
   height: 100vh;
 }
 
-#philips-term {
-  height: 100%;
+.term-container {
+  margin: 0;
   width: 100%;
-  min-height: 100%;
-  min-width: 100%;
+}
+
+#philips-term {
+  margin: 0;
+  overflow-x: hidden;
 }
 
 * {
