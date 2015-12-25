@@ -91,8 +91,8 @@
     /*margin-top: 3px; */
 }
 .terminal .inverted, .cmd .inverted, .cmd .cursor.blink {
-    background-color: #aaa;
-    color: #000;
+    background-color: #1c4a4a;
+    color: #1c4a4a;
 }
 .cmd .cursor.blink {
     -webkit-animation: terminal-blink 1s infinite steps(1, start);
@@ -102,50 +102,50 @@
 }
 @-webkit-keyframes terminal-blink {
   0%, 100% {
-      background-color: #000;
-      color: #aaa;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
   50% {
-      background-color: #bbb;
-      color: #000;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
 }
 
 @-ms-keyframes terminal-blink {
   0%, 100% {
-      background-color: #000;
-      color: #aaa;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
   50% {
-      background-color: #bbb;
-      color: #000;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
 }
 
 @-moz-keyframes terminal-blink {
   0%, 100% {
-      background-color: #000;
-      color: #aaa;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
   50% {
-      background-color: #bbb;
-      color: #000;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
 }
 @keyframes terminal-blink {
   0%, 100% {
-      background-color: #000;
-      color: #aaa;
+      background-color: #1c4a4a;
+      color: #1c4a4a;
   }
   50% {
-      background-color: #bbb; /* not #aaa because it's seems there is Google Chrome bug */
-      color: #000;
+      background-color: #1c4a4a; /* not #aaa because it's seems there is Google Chrome bug */
+      color: #1c4a4a;
   }
 }
 
 .terminal .terminal-output div div, .cmd .prompt {
     display: block;
-    line-height: 14px;
+    line-height: 20px;
     height: auto;
 }
 .cmd .prompt {
@@ -154,10 +154,10 @@
 .terminal, .cmd {
     font-family: monospace;
     /*font-family: FreeMono, monospace; this don't work on Android */
-    color: #aaa;
-    background-color: #000;
-    font-size: 12px;
-    line-height: 14px;
+    color: #FFF;
+    background-color: #1c4a4a;
+    font-size: 18px;
+    line-height: 20px;
 }
 .terminal-output > div {
     /*padding-top: 3px;*/
