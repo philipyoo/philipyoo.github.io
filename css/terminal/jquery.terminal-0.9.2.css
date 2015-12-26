@@ -93,6 +93,7 @@
 .terminal .inverted, .cmd .inverted, .cmd .cursor.blink {
     background-color: #1c4a4a;
     color: #1c4a4a;
+    border: 1px solid white;
 }
 .cmd .cursor.blink {
     -webkit-animation: terminal-blink 1s infinite steps(1, start);
