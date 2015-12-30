@@ -1,7 +1,3 @@
-/*body {
-  background-color: #1c4a4a;
-}*/
-
 /** {
   border: 1px red solid;
 }*/
@@ -19,18 +15,13 @@
 }
 
 .content-body {
+  position: relative;
   background-color: #1c4a4a;
+  height: 100vh;
 }
 
 /*.off-canvas {
   min-height: 100%;
-}*/
-
-/*.term-container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
 }*/
 
 /*#philips-term {
