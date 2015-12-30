@@ -43,10 +43,6 @@ var termCommands = {
     this.echo("<b>Hello</b>", {raw: true});
     this.echo("test");
   },
-  random: function() {
-    var url = "https://github.com/philipyoo/philipyoo.github.io/blob/master/philipyoo.json"
-
-  },
   about: function() {
     this.echo("<p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
   },
@@ -63,6 +59,7 @@ var termCommands = {
 
 
 jQuery(function($, undefined) {
+  var height = $(window).height();
 
   $('#philips-term').terminal(termCommands, {
       greetings: "Welcome to Philip Yoo's Computer\n"+
@@ -71,6 +68,9 @@ jQuery(function($, undefined) {
       prompt: 'philipyoo> ',
       onBlur: function() {
         return false;
-      }
+      },
+      exit: false,
+      tabcompletion: true,
+      height: height
   });
 });
