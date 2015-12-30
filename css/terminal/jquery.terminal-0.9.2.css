@@ -153,12 +153,12 @@
     float: left;
 }
 .terminal, .cmd {
-    font-family: monospace;
+    font-family: "Monaco", monospace;
     /*font-family: FreeMono, monospace; this don't work on Android */
     color: #FFF;
-    background-color: #1c4a4a;
-    font-size: 18px;
-    line-height: 20px;
+    background-color: #153737;
+    font-size: 16px;
+    line-height: 18px;
 }
 .terminal-output > div {
     /*padding-top: 3px;*/

@@ -2,6 +2,10 @@
   border: 1px red solid;
 }*/
 
+body {
+  font-family: "Monaco";
+}
+
 .row.full {
   max-width: 100%;
 }
@@ -16,7 +20,7 @@
 
 .content-body {
   position: relative;
-  background-color: #1c4a4a;
+  background-color: #153737;
   height: 100vh;
 }
 

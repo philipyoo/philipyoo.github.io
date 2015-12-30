@@ -36,19 +36,12 @@ var termCommands = {
   echo: function(cmd) {
     this.echo(cmd);
   },
-  test: function() {
-    this.echo("You inputted test.");
-  },
   help: function() {
-    this.echo("<b>Hello</b>", {raw: true});
+    this.echo("<br/><b>Hello</b>", {raw: true});
     this.echo("test");
   },
-  random: function() {
-    var url = "https://github.com/philipyoo/philipyoo.github.io/blob/master/philipyoo.json"
-
-  },
   about: function() {
-    this.echo("<p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
+    this.echo("<br/><p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
   },
   resume: function() {
 
@@ -63,14 +56,18 @@ var termCommands = {
 
 
 jQuery(function($, undefined) {
+  var height = $(window).height();
 
   $('#philips-term').terminal(termCommands, {
-      greetings: "Welcome to Philip Yoo's Computer\n"+
-                 "Use `[[guib;<blue>]help]` for a list of commands",
+      greetings: "Logged in to PHILIPs-MBP\n"+
+                 "Use `[[;gold;#153737]help]` for a list of commands\n",
       name: "Philip's Terminal",
       prompt: 'philipyoo> ',
       onBlur: function() {
         return false;
-      }
+      },
+      exit: false,
+      tabcompletion: true,
+      height: height
   });
 });
