@@ -38,7 +38,7 @@ var termCommands = {
   },
   help: function() {
     this.echo("<br/><b>Hello</b>", {raw: true});
-    this.echo("test");
+    this.echo("test", {raw: true});
   },
   about: function() {
     this.echo("<br/><p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
@@ -51,18 +51,38 @@ var termCommands = {
   },
   clear: function() {
     clear();
-  }
+  },
+  colors: function() {
+    this.echo("[[;#d3e7d3;#153737]1. test]");
+    this.echo("[[;#243434;#153737]2. test]");
+    this.echo("[[;#576479;#153737]3. test]");
+    this.echo("[[;#323232;#153737]4. test]");
+    this.echo("[[;#757575;#153737]5. test]");
+    this.echo("[[;#825d4d;#153737]6. test]");
+    this.echo("[[;#718c61;#153737]7. test]");
+    this.echo("[[;#ada16d;#153737]8. test]");
+    this.echo("[[;#4d7b82;#153737]9. test]");
+    this.echo("[[;#8a7167;#153737]10. test]");
+    this.echo("[[;#719393;#153737]11. test]");
+    this.echo("[[;#e0e0e0;#153737]12. test]");
+    this.echo("[[;#8a8a8a;#153737]13. test]");
+    this.echo("[[;#cf9379;#153737]14. test]");
+    this.echo("[[;#98d9aa;#153737]15. test]");
+    this.echo("[[;#fae79d;#153737]16. test]");
+    this.echo("[[;#79c3cf;#153737]17.test]");
+    this.echo("[[;#d6b2a1;#153737]18. test]");
+    this.echo("[[;#ade0e0;#153737]19. test]");
+  },
 }
-
 
 jQuery(function($, undefined) {
   var height = $(window).height();
 
   $('#philips-term').terminal(termCommands, {
       greetings: "Logged in to PHILIPs-MBP\n"+
-                 "Use `[[;gold;#153737]help]` for a list of commands\n",
+                 "Use `[[;gold;#243434]help]` for a list of commands\n",
       name: "Philip's Terminal",
-      prompt: 'philipyoo> ',
+      prompt: "[[;#825d4d;#243434]guest~] > ",
       onBlur: function() {
         return false;
       },
