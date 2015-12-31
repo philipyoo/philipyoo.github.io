@@ -9,7 +9,8 @@ var philipyoo = {
   "name" : "Philip Yoo",
   "location" : "San Diego",
   "gender" : "male",
-  "randomFacts" : [
+  "about" : "Hello and thank you for dropping by! My name is Philip Yoo and I spent most of my life in San Diego, CA. I attended and graduated from Dev Bootcamp in San Francisco. I am an aspiring full-stack developer who is currently looking for opportunities to apply what I have learned so far and continue learning in order to be the best that I could be as a developer.",
+  "random" : [
     "I could live off of Burritos! (Seriously)",
     "Huge fan of Milk Tea with Boba.",
     "I enjoy playing Texas Hold'em Poker NL >:)",
@@ -18,17 +19,16 @@ var philipyoo = {
     "Semi-Foodie?",
     "Coined the term 'Philip Yoo is Awesome'"
   ],
-  "aboutMeBody" : "Hello and thank you for dropping by! My name is Philip Yoo and I spent most of my life in San Diego, CA. I attended and graduated from Dev Bootcamp in San Francisco. I am an aspiring full-stack developer who is currently looking for opportunities to apply what I have learned so far and continue learning in order to be the best that I could be as a developer.",
   "resume" : ["Stuff goes in here"],
   "resumeLink" : "Put in link here",
+  "projects" : [],
   "socialMedia" : {
     "blogger" : "http://philipyoo.blogspot.com/",
     "email" : "mailto:philipyoo10@gmail.com",
     "github" : "https://github.com/philipyoo",
     "linkedin" : "https://www.linkedin.com/in/philipyoo",
     "twitter" : "https://twitter.com/philipYoo10"
-  },
-  "projects" : []
+  }
 };
 
 
@@ -37,8 +37,25 @@ var termCommands = {
     this.echo(cmd);
   },
   help: function() {
-    this.echo("<br/><b>Hello</b>", {raw: true});
-    this.echo("test", {raw: true});
+    var exclusions = ["name", "location", "gender", "resumeLink", "socialMedia"];
+    var validOptions = [];
+
+    var sayings = [];
+
+    for (category in philipyoo) {
+      if (exclusions.indexOf(category) === -1) {
+        validOptions.push(category);
+      }
+    }
+
+    this.echo("<span>//~ List of Commands: </span>", {raw: true});
+    this.echo("<span>//-------------------</span>", {raw: true});
+
+    for (var i = 0; i < validOptions.length; i++) {
+      this.echo("<span> -> " + validOptions[i] + "</span>", {raw: true});
+    }
+
+    this.echo("<span> -> clear</span>", {raw: true});
   },
   about: function() {
     this.echo("<br/><p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
