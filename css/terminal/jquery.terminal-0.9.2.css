@@ -91,8 +91,8 @@
     /*margin-top: 3px; */
 }
 .terminal .inverted, .cmd .inverted, .cmd .cursor.blink {
-    background-color: #1c4a4a;
-    color: #1c4a4a;
+    background-color: #FFF;
+    color: #FFF;
     border: 1px solid white;
 }
 .cmd .cursor.blink {
@@ -103,50 +103,51 @@
 }
 @-webkit-keyframes terminal-blink {
   0%, 100% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
   50% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
 }
 
 @-ms-keyframes terminal-blink {
   0%, 100% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
   50% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
 }
 
 @-moz-keyframes terminal-blink {
   0%, 100% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
   50% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
 }
 @keyframes terminal-blink {
   0%, 100% {
-      background-color: #1c4a4a;
-      color: #1c4a4a;
+      background-color: #FFF;
+      color: #FFF;
   }
   50% {
-      background-color: #1c4a4a; /* not #aaa because it's seems there is Google Chrome bug */
-      color: #1c4a4a;
+      background-color: #FFF; /* not #aaa because it's seems there is Google Chrome bug */
+      color: #FFF;
   }
 }
 
 .terminal .terminal-output div div, .cmd .prompt {
     display: block;
     line-height: 20px;
+    margin-bottom: 8px;
     height: auto;
 }
 .cmd .prompt {
@@ -156,7 +157,7 @@
     font-family: "Monaco", monospace;
     /*font-family: FreeMono, monospace; this don't work on Android */
     color: #FFF;
-    background-color: #153737;
+    background-color: #243434;
     font-size: 16px;
     line-height: 18px;
 }
@@ -250,7 +251,7 @@
     color: #000;
 }
 .terminal .terminal-output div.error, .terminal .terminal-output div.error div {
-    color: red;
+    color: #0F60FF;
 }
 .tilda {
     position: fixed;
@@ -266,5 +267,5 @@
     color: #0F60FF;
 }
 .terminal a:hover {
-    color: red;
+    color: #0F60FF;
 }
