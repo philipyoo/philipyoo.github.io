@@ -164,9 +164,11 @@
 .terminal-output > div {
     /*padding-top: 3px;*/
     min-height: 14px;
+    /*margin-bottom: 5px;*/
 }
 .terminal .terminal-output div span {
     display: inline-block;
+    margin-bottom: 5px;
 }
 .cmd span {
     float: left;

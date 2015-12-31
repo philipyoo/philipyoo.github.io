@@ -16,6 +16,7 @@ body {
   position: relative;
   background-color: #243434;
   height: 100vh;
+  padding-right: 0;
 }
 
 .img-icon {
