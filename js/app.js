@@ -54,16 +54,16 @@ var termCommands = {
       this.echo("<span> -> " + validOptions[i] + "</span>", {raw: true});
     }
 
-    this.echo("<span> -> clear</span>", {raw: true});
+    this.echo("<span> -> clear</span><br/>", {raw: true});
   },
   about: function() {
-    this.echo("<br/><p>" + philipyoo.aboutMeBody + "</p>", {raw: true});
+    this.echo("<span>" + philipyoo.about + "</span>", {raw: true});
   },
   resume: function() {
 
   },
   projects: function() {
-
+    // this.echo("<span>")
   },
   clear: function() {
     clear();
