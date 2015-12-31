@@ -8,14 +8,8 @@ body {
 
 .row.full {
   max-width: 100%;
-}
-
-.sidebar {
-  position: fixed;
-  background-color: gray;
-  min-height: 100%;
-  -webkit-box-shadow: 5px 0 1px 1px #555;
-  box-shadow: 5px 0 1px 1px #555;
+  margin: 0;
+  padding: 0;
 }
 
 .content-body {
@@ -24,32 +18,44 @@ body {
   height: 100vh;
 }
 
-/*.off-canvas {
-  min-height: 100%;
-}*/
-
-/*#philips-term {
-  margin: 0;
-  overflow: hidden;
-  height: 97vh;
-}*/
+.img-icon {
+  height: auto;
+  width: 30%;
+  max-width: 100px;
+  min-width: 60px;
+  margin: 2px;
+}
 
 /*Mobile screens*/
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 639px) {
   .desktop {
     display: none;
   }
   .mobile {
     display: block;
+  }
+  .sidebar {
+    position: relative;
+    height: 100vh;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
   }
 }
 
 /*Non-mobile screens*/
-@media only screen and (min-width: 40.063em) {
+@media only screen and (min-width: 640px) {
   .desktop {
     display: block;
   }
   .mobile {
     display: none;
+  }
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
   }
 }
