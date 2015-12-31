@@ -37,10 +37,9 @@ var termCommands = {
     this.echo(cmd);
   },
   help: function() {
+    // Exclude certain keys or categories within philipyoo.json
     var exclusions = ["name", "location", "gender", "resumeLink", "socialMedia"];
     var validOptions = [];
-
-    var sayings = [];
 
     for (category in philipyoo) {
       if (exclusions.indexOf(category) === -1) {
