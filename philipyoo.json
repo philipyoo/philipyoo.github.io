@@ -53,6 +53,7 @@ var philipyoo = {
     "email" : "mailto:philipyoo10@gmail.com",
     "github" : "https://github.com/philipyoo",
     "linkedin" : "https://www.linkedin.com/in/philipyoo",
-    "twitter" : "https://twitter.com/philipYoo10"
+    "twitter" : "https://twitter.com/philipYoo10",
+    "stackoverflow" : "http://stackoverflow.com/users/4803039/philip-yoo"
   }
 };
