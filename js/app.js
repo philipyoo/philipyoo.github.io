@@ -1,9 +1,15 @@
 // $(document).foundation();
 
 // TODO: Use json information in `philipyoo.json`
-// $.getJSON("./philipyoo.json", function(info) {
-//   console.log(info);
-// })
+var testThis;
+
+$.getJSON("./philipyoo.json", function(info) {
+  console.log(info);
+  testThis = info;
+})
+
+console.log('testing: ');
+console.log(testThis);
 
 var philipyoo = {
   "name" : "Philip Yoo",
@@ -60,9 +66,42 @@ var philipyoo = {
     "email" : "mailto:philipyoo10@gmail.com",
     "github" : "https://github.com/philipyoo",
     "linkedin" : "https://www.linkedin.com/in/philipyoo",
-    "twitter" : "https://twitter.com/philipYoo10"
+    "twitter" : "https://twitter.com/philipYoo10",
+    "stackoverflow" : "http://stackoverflow.com/users/4803039/philip-yoo"
   }
 };
+
+
+
+var sidebarDiv = document.getElementById("social-media");
+var smKeys = Object.keys(philipyoo.socialMedia);
+
+for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
+  // Create the div with class name
+  var element = document.createElement('div');
+  element.className = "column";
+
+  // Create the img with class name
+  var img = document.createElement('img');
+  img.className = "img-icon";
+
+  // Get the key name and add to src for img
+  var key = smKeys[i]
+  img.src = "./img/" + smKeys[i] + ".png"
+
+  // Add the img inside `element` div
+  element.appendChild(img);
+
+  // Add the element to parent div `sidebarDiv`
+  sidebarDiv.appendChild(element);
+}
+
+
+
+
+
+
+
 
 var termCommands = {
   echo: function(cmd) {

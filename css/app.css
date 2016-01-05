@@ -6,6 +6,12 @@ body {
   font-family: "Monaco";
 }
 
+.name-title {
+  font-size: 3em;
+  text-align: center;
+  font-family: monospace;
+}
+
 .row.full {
   max-width: 100%;
   margin: 0;
@@ -27,8 +33,9 @@ body {
   margin: 2px;
 }
 
-.social-media {
+#social-media {
   text-align: center;
+  bottom: 0;
 }
 
 /*Mobile screens*/
