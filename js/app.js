@@ -41,8 +41,8 @@ var termCommands = {
       }
     }
 
-    this.echo("<span class='contents'>// List of Commands: </span>", {raw: true});
-    this.echo("<span class='contents'>//-------------------</span>", {raw: true});
+    this.echo("<p class='header-main'>// List of Commands: </p>", {raw: true});
+    // this.echo("<span class='contents'>//-------------------</span>", {raw: true});
 
     for (var i = 0; i < validOptions.length; i++) {
       this.echo("<span>&nbsp; -> " + validOptions[i] + "</span>", {raw: true});
@@ -88,10 +88,10 @@ var termCommands = {
     var projectNames = Object.keys(philipyoo.projects);
 
     for (var i = 0; i < projectNames.length; i++) {
-      this.echo("<span class='header'>" + projectNames[i]  + "</span>", {raw: true});
+      this.echo("&nbsp;&nbsp;<p class='category'>" + projectNames[i]  + "</p>", {raw: true});
 
-      this.echo("<span class='contents'>" + philipyoo.projects[projectNames[i]].info + "</span>", {raw: true});
-      this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a>", {raw: true});
+      this.echo("<p class='contents'>" + philipyoo.projects[projectNames[i]].info + "</p>", {raw: true});
+      this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a><br/><br/>", {raw: true});
     }
   },
   clear: function() {
