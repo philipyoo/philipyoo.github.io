@@ -59,6 +59,10 @@ var termCommands = {
   about: function() {
     this.echo("<span>" + philipyoo.about + "</span>", {raw: true});
   },
+  random: function() {
+    this.echo(philipyoo.random[Math.floor(Math.random() * philipyoo.random.length)]);
+    this.echo("<i>Try using `random` again</i>", {raw: true});
+  },
   resume: function() {
 
   },
