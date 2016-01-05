@@ -76,14 +76,14 @@ var termCommands = {
       }
     }
 
-    this.echo("<span>//~ List of Commands: </span>", {raw: true});
-    this.echo("<span>//-------------------</span>", {raw: true});
+    this.echo("<span class='contents'>// List of Commands: </span>", {raw: true});
+    this.echo("<span class='contents'>//-------------------</span>", {raw: true});
 
     for (var i = 0; i < validOptions.length; i++) {
-      this.echo("<span> -> " + validOptions[i] + "</span>", {raw: true});
+      this.echo("<span>&nbsp; -> " + validOptions[i] + "</span>", {raw: true});
     }
 
-    this.echo("<span> -> clear</span><br/>", {raw: true});
+    this.echo("<span>&nbsp; -> clear</span><br/>", {raw: true});
   },
   about: function() {
     this.echo("<span>" + philipyoo.about + "</span>", {raw: true});
@@ -97,31 +97,31 @@ var termCommands = {
       var content = philipyoo.resume[category];   // Contents are all Array Types
 
       if (category !== "header") {
-        this.echo("<span class='category'>" + category + "</span>", {raw: true});
+        this.echo("<br/>&nbsp;&nbsp;<span class='category'>" + category + "</span>", {raw: true});
 
         content.forEach(function(c) {
           if (Array.isArray(c)) {  // for ease-of-use, made sub-contents array types
             var stringTogether = c.length === 1 ? c : c.join(', ')
 
-            this.echo("<span class='sub-contents'>" + stringTogether + "</span>", {raw: true});
+            this.echo("<span class='sub-contents'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + stringTogether + "</span>", {raw: true});
           } else {
             this.echo("<span class='contents'>" + c + "</span>", {raw: true});
           }
         }.bind(this))
       } else {
-        this.echo("<span class='header-main'>" + content[0] + "</span>", {raw: true});
-        this.echo("<span class='header-main'>" + content[1] + "</span>", {raw: true});
-        this.echo("----------");
+        this.echo("<br/><span class='header-main'> " + content[0] + "</span>", {raw: true});
+        this.echo("&nbsp;&nbsp;<span class='header-sub'> > " + content[1] + "</span>", {raw: true});
       }
     }
 
-    this.echo("Download the Resume by clicking <a href='./Resume.PhilipYoo.pdf' download='Resume.PhilipYoo.pdf'>HERE</a>", {raw: true});
+    this.echo("<br/>--------", {raw: true});
+    this.echo("Download the Resume by clicking <a href='./Resume.PhilipYoo.pdf' download='Resume.PhilipYoo.pdf'>HERE</a><br/><br/>", {raw: true});
   },
   projects: function() {
     var projectNames = Object.keys(philipyoo.projects);
 
     for (var i = 0; i < projectNames.length; i++) {
-      this.echo("<span class='header-main'>" + projectNames[i]  + "</span>", {raw: true});
+      this.echo("<span class='header'>" + projectNames[i]  + "</span>", {raw: true});
 
       this.echo("<span class='contents'>" + philipyoo.projects[projectNames[i]].info + "</span>", {raw: true});
       this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a>", {raw: true});

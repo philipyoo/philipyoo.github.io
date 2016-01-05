@@ -271,3 +271,46 @@
 .terminal a:hover {
     color: #0F60FF;
 }
+
+.category {
+  color: #ade0e0;
+  font-size: 150%;
+  text-decoration: underline;
+}
+.header-main {
+  color: #fae79d;
+  font-size: 200%;
+  /*font-family: monospace;*/
+}
+.header-sub {
+  color: #8a8a8a;
+}
+.contents {
+  color: #FFF;
+  line-height: 1.2em;
+}
+.sub-contents {
+  color: #cf9379;
+  font-size: 80%;
+}
+
+
+/*this.echo("[[;#d3e7d3;#243434]1. test]");
+this.echo("[[;#243434;#243434]2. test]");
+this.echo("[[;#576479;#243434]3. test]");
+this.echo("[[;#323232;#243434]4. test]");
+this.echo("[[;#757575;#243434]5. test]");
+this.echo("[[;#825d4d;#243434]6. test]");
+this.echo("[[;#718c61;#243434]7. test]");
+this.echo("[[;#ada16d;#243434]8. test]");
+this.echo("[[;#4d7b82;#243434]9. test]");
+this.echo("[[;#8a7167;#243434]10. test]");
+this.echo("[[;#719393;#243434]11. test]");
+this.echo("[[;#e0e0e0;#243434]12. test]");
+this.echo("[[;#8a8a8a;#243434]13. test]");
+this.echo("[[;#cf9379;#243434]14. test]");
+this.echo("[[;#98d9aa;#243434]15. test]");
+this.echo("[[;#fae79d;#243434]16. test]");
+this.echo("[[;#79c3cf;#243434]17. test]");
+this.echo("[[;#d6b2a1;#243434]18. test]");
+this.echo("[[;#ade0e0;#243434]19. test]");*/
