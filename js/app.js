@@ -36,10 +36,10 @@ var philipyoo = {
     ],
     "education" : ["Dev Bootcamp", "Web Development (2015)", "University of San Diego", "Bachelor of Business Administration (2010)"],
     "employment" : [
-      "City National Bank, Relationship Banker", "Carlsbad, CA (Feb.14 - Jan.15)",
-      "Accend Energy, Energy Efficiency Consultant", "San Diego, CA (Dec.12 - Dec.13)",
-      "Aventis Asset Management, Research Analyst Intern", "Costa Mesa, CA (Jun.12 - Aug.12)",
-      "USA Trading, Operations and Market Research", "Chicago, IL (Jan.11 - May.12)"
+      "City National Bank, Relationship Banker", ["Carlsbad, CA (Feb.14 - Jan.15)"],
+      "Accend Energy, Energy Efficiency Consultant", ["San Diego, CA (Dec.12 - Dec.13)"],
+      "Aventis Asset Management, Research Analyst Intern", ["Costa Mesa, CA (Jun.12 - Aug.12)"],
+      "USA Trading, Operations and Market Research", ["Chicago, IL (Jan.11 - May.12)"]
     ]
   },
   "projects" : [],
@@ -85,6 +85,29 @@ var termCommands = {
     this.echo("<i>Try using `random` again</i>", {raw: true});
   },
   resume: function() {
+    for (var i = 0; i < Object.keys(philipyoo.resume).length; i++) {
+      var category = Object.keys(philipyoo.resume)[i];
+      var content = philipyoo.resume[category];   // Contents are all Array Types
+
+      if (category !== "header") {
+        this.echo("<span class='category'>" + category + "</span>", {raw: true});
+
+        content.forEach(function(c) {
+          if (Array.isArray(c)) {  // for ease-of-use, made sub-contents array types
+            var stringTogether = c.length === 1 ? c : c.join(', ')
+
+            this.echo("<span class='sub-contents'>" + stringTogether + "</span>", {raw: true});
+          } else {
+            this.echo("<span class='contents'>" + c + "</span>", {raw: true});
+          }
+        }.bind(this))
+      } else {
+        this.echo("<span class='header-main'>" + content[0] + "</span>", {raw: true});
+        this.echo("<span class='header-main'>" + content[1] + "</span>", {raw: true});
+        this.echo("----------");
+      }
+    }
+
     this.echo("Download the Resume by clicking <a href='./Resume.PhilipYoo.pdf' download='Philip.pdf'>HERE</a>", {raw: true});
   },
   projects: function() {
@@ -110,7 +133,7 @@ var termCommands = {
     this.echo("[[;#cf9379;#243434]14. test]");
     this.echo("[[;#98d9aa;#243434]15. test]");
     this.echo("[[;#fae79d;#243434]16. test]");
-    this.echo("[[;#79c3cf;#243434]17.test]");
+    this.echo("[[;#79c3cf;#243434]17. test]");
     this.echo("[[;#d6b2a1;#243434]18. test]");
     this.echo("[[;#ade0e0;#243434]19. test]");
   },
