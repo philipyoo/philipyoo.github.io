@@ -34,7 +34,10 @@ var philipyoo = {
       "I attended Dev Bootcamp, where I spent 1000+ hours learning to program applications and build websites. I worked on projects in pairs or in groups and was able to clearly communicate ideas to the team. I learned about engineering empathy and how that can affect a team's performance. I approached many of my projects structurally from a user's point-of-view while applying Agile development. I picked up new technologies within days and applied them to relevant projects. And...I did this all while enjoying the experience.",
       "I am a full-stack web developer who has a strong desire to build meaningful and fun applications. I am currently seeking opportunities to apply and expand upon my current skill sets. I am a quick learner who enjoys problem-solving, gaming, and contributing to a team environment."
     ],
-    "education" : ["Dev Bootcamp", "Web Development (2015)", "University of San Diego", "Bachelor of Business Administration (2010)"],
+    "education" : [
+      "Dev Bootcamp", ["Web Development (2015)"],
+      "University of San Diego", ["Bachelor of Business Administration (2010)"]
+    ],
     "employment" : [
       "City National Bank, Relationship Banker", ["Carlsbad, CA (Feb.14 - Jan.15)"],
       "Accend Energy, Energy Efficiency Consultant", ["San Diego, CA (Dec.12 - Dec.13)"],
@@ -100,6 +103,8 @@ var termCommands = {
         this.echo("<br/>&nbsp;&nbsp;<span class='category'>" + category + "</span>", {raw: true});
 
         content.forEach(function(c) {
+          console.log(Array.isArray(c));
+          console.log(c);
           if (Array.isArray(c)) {  // for ease-of-use, made sub-contents array types
             var stringTogether = c.length === 1 ? c : c.join(', ')
 
