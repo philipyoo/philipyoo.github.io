@@ -16,7 +16,7 @@ var philipyoo = {
     "I enjoy playing Texas Hold'em Poker NL >:)",
     "First programming language: Ruby.",
     "Guilty Pleasure: Korean music and sports-related cartoons",
-    "I'm a Semi-Foodie?r",
+    "I'm a Semi-Foodie?",
     "Coined the term 'Philip Yoo is Awesome'"
   ],
   "resume" : {
@@ -42,7 +42,16 @@ var philipyoo = {
       "USA Trading, Operations and Market Research", ["Chicago, IL (Jan.11 - May.12)"]
     ]
   },
-  "projects" : [],
+  "projects" : {
+    "The Game" : {
+      "info" : "'The Game' is a 2D Multiplayer Sidescrolling Shooting game built using MongoDB, NodeJS, ExpressJS, Socket.IO, and Phaser.<br/> Built with a team of 5 over a 6 day period, our goal for this project was to discover making a shooting game that allows multiple players to play together. Our team implemented Agile development methodologies with Object-Orientation to help with the translation of data being passed to the sockets and attempted to use MVC design structure.<br/> My specific role in this project was front-end using Phaser, a JavaScript Physics Game Engine.",
+      "url" : "https://github.com/cpbasham/TheGame-0.2"
+    },
+    "Terminal Chess" : {
+      "info" : "A 2-player chess game playable via the terminal. Built with Ruby, I decided to start this project to practice building out a program that requires a lot of communication between different classes, organizing code to implement common Ruby structures like inheritance, and making the view portion fun and challenging by including user keystrokes as input for the program and using the Ruby colorize gem to add color and visuals to the game.",
+      "url" : "https://github.com/philipyoo/terminal-chess"
+    }
+  },
   "socialMedia" : {
     "blogger" : "http://philipyoo.blogspot.com/",
     "email" : "mailto:philipyoo10@gmail.com",
@@ -51,7 +60,6 @@ var philipyoo = {
     "twitter" : "https://twitter.com/philipYoo10"
   }
 };
-
 
 var termCommands = {
   echo: function(cmd) {
@@ -82,7 +90,6 @@ var termCommands = {
   },
   random: function() {
     this.echo(philipyoo.random[Math.floor(Math.random() * philipyoo.random.length)]);
-    this.echo("<i>Try using `random` again</i>", {raw: true});
   },
   resume: function() {
     for (var i = 0; i < Object.keys(philipyoo.resume).length; i++) {
@@ -108,10 +115,17 @@ var termCommands = {
       }
     }
 
-    this.echo("Download the Resume by clicking <a href='./Resume.PhilipYoo.pdf' download='Philip.pdf'>HERE</a>", {raw: true});
+    this.echo("Download the Resume by clicking <a href='./Resume.PhilipYoo.pdf' download='Resume.PhilipYoo.pdf'>HERE</a>", {raw: true});
   },
   projects: function() {
-    // this.echo("<span>")
+    var projectNames = Object.keys(philipyoo.projects);
+
+    for (var i = 0; i < projectNames.length; i++) {
+      this.echo("<span class='header-main'>" + projectNames[i]  + "</span>", {raw: true});
+
+      this.echo("<span class='contents'>" + philipyoo.projects[projectNames[i]].info + "</span>", {raw: true});
+      this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a>", {raw: true});
+    }
   },
   clear: function() {
     clear();
@@ -143,7 +157,7 @@ jQuery(function($, undefined) {
   var height = $(window).height();
 
   $('#philips-term').terminal(termCommands, {
-      greetings: "Logged in to PHILIPs-MBP\n"+
+      greetings: "Logged in to PHILIPs-SITE\n"+
                  "Use `[[;gold;#243434]help]` for a list of commands\n",
       name: "Philip's Terminal",
       prompt: "[[;#825d4d;#243434]guest~] :> ",
