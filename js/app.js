@@ -64,7 +64,7 @@ var termCommands = {
     this.echo("<i>Try using `random` again</i>", {raw: true});
   },
   resume: function() {
-
+    this.echo("Download the Resume <a href='./Resume.PhilipYoo.pdf' download='Philip.pdf'>HERE</a>", {raw: true});
   },
   projects: function() {
     // this.echo("<span>")
