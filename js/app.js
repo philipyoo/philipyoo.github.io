@@ -1,13 +1,16 @@
 // $(document).foundation();
 
-
+// Set Social Media Stuff
+//TODO: Add links!!!~~~~~
+//TODO: remove block grids, remove margins/paddings, stick them together in one large block of 2x3
 var sidebarDiv = document.getElementById("social-media");
 var smKeys = Object.keys(philipyoo.socialMedia);
 
 for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   // Create the div with class name
   var element = document.createElement('div');
-  element.className = "column";
+  element.className = "small-4 medium-6 columns";
+  // element.className = "column";
 
   // Create the img with class name
   var img = document.createElement('img');
@@ -23,6 +26,11 @@ for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   // Add the element to parent div `sidebarDiv`
   sidebarDiv.appendChild(element);
 }
+
+
+// Set content for simple mobile view
+var mobileContainer = document.getElementById("mobile");
+
 
 
 
@@ -124,7 +132,8 @@ jQuery(function($, undefined) {
   var height = $(window).height();
 
   $('#philips-term').terminal(termCommands, {
-      greetings: "Logged in to PHILIPs-SITE\n"+
+      greetings: "[[b;red;#243434]Note:] For best experience, view on Desktop with fullscreen\n" +
+                 "Logged in to PHILIPs-SITE\n" +
                  "Use `[[;gold;#243434]help]` for a list of commands\n",
       name: "Philip's Terminal",
       prompt: "[[;#825d4d;#243434]guest~] :> ",
