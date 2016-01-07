@@ -124,6 +124,7 @@ var termCommands = {
     this.echo("[[;#79c3cf;#243434]17. test]");
     this.echo("[[;#d6b2a1;#243434]18. test]");
     this.echo("[[;#ade0e0;#243434]19. test]");
+    this.echo("This is supposed to be a secret command! How'd you get here?!");
   },
 }
 
