@@ -17,6 +17,11 @@ hr {
   font-family: monospace;
 }
 
+.sub-title {
+  font-size: 15px;
+  font-family: monospace;
+}
+
 .row.full {
   max-width: 100%;
   margin: 0;
@@ -35,7 +40,7 @@ hr {
   height: auto;
   width: 30%;
   max-width: 100px;
-  min-width: 60px;
+  min-width: 80px;
   /*padding: 1em;*/
 }
 
@@ -43,6 +48,10 @@ hr {
   position: relative;
   /*text-align: center;*/
   /*bottom: 25%;*/
+}
+
+.add-padding {
+  padding: 15px;
 }
 
 .sidebar {
@@ -54,6 +63,17 @@ hr {
   text-align: center;
 }
 
+.style-mypic {
+  height: auto;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.warn-resize {
+  height: auto;
+  width: 25px;
+}
 
 /*Mobile screens*/
 @media only screen and (max-width: 639px) {
@@ -62,12 +82,13 @@ hr {
   }
   #mobile {
     display: block;
-    width: 50px;
-    margin: 0px auto;
+    margin: 0 auto;
   }
   .sidebar {
     position: relative;
     width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -78,7 +99,6 @@ hr {
   }
   #mobile {
     display: none;
-    width: 50%;
     margin: 0 auto;
   }
   .sidebar {

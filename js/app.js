@@ -9,7 +9,7 @@ var smKeys = Object.keys(philipyoo.socialMedia);
 for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   // Create the div with class name
   var element = document.createElement('div');
-  element.className = "small-4 medium-6 columns";
+  element.className = "small-4 medium-6 columns add-padding";
   // element.className = "column";
 
   // Create the img with class name
