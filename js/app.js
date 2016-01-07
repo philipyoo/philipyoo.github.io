@@ -1,7 +1,6 @@
 // $(document).foundation();
 
 // Set Social Media Stuff
-//TODO: Add links!!!~~~~~
 var sidebarDiv = document.getElementById("social-media");
 var smKeys = Object.keys(philipyoo.socialMedia);
 
@@ -9,7 +8,11 @@ for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   // Create the div with class name
   var element = document.createElement('div');
   element.className = "small-4 medium-6 columns add-padding";
-  // element.className = "column";
+
+  // Create link and set attribute to open link in new tab
+  var linkImg = document.createElement('a');
+  linkImg.href = philipyoo.socialMedia[smKeys[i]];
+  linkImg.setAttribute('target', '_blank');
 
   // Create the img with class name
   var img = document.createElement('img');
@@ -19,8 +22,11 @@ for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   var key = smKeys[i]
   img.src = "./img/" + smKeys[i] + ".png"
 
-  // Add the img inside `element` div
-  element.appendChild(img);
+  // Add the image to link
+  linkImg.appendChild(img);
+
+  // Add the link inside `element` div
+  element.appendChild(linkImg);
 
   // Add the element to parent div `sidebarDiv`
   sidebarDiv.appendChild(element);
