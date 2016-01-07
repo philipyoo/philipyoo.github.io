@@ -2,7 +2,7 @@ var philipyoo = {
   "name" : "Philip Yoo",
   "location" : "San Diego",
   "gender" : "male",
-  "about" : "Hello and thank you for dropping by! My name is Philip Yoo and I spent most of my life in San Diego, CA. I attended and graduated from Dev Bootcamp in San Francisco. I am an aspiring full-stack developer who is currently looking for opportunities to apply what I have learned so far and continue learning in order to be the best that I could be as a developer.",
+  "about" : "Hello and thank you for dropping by! My name is Philip Yoo and I spent most of my life in San Diego, CA. I attended and completed a program called <a href='http://devbootcamp.com/' target='_blank'>DevBootcamp</a> in San Francisco. I am an aspiring full-stack developer who is currently looking for opportunities to apply what I have learned so far and continue learning in order to be the best that I could be as a developer.",
   "random" : [
     "I could live off of Burritos! (Seriously)",
     "Huge fan of Milk Tea with Boba.",
