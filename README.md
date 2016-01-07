@@ -2,16 +2,11 @@
 
 Github repository for my personal website.
 
+Have any suggestions/recommendations for the design of the site? Please reach out! I'm always interested in knowing what people think and how I can improve UX & Design of the site.
 
-### Things to work on:
 
-+ Add jQuery Terminal code.
-+ Work on json information.
-+ Add Head banner.
-+ Include Social Media Buttons (including Blogger).
-+ Add resume - both via terminal and downloadable.
-+ Update layout, prettify it man!
-+ Add mobile version.
-+ Consider color scheme.
-+ Add credits and technologies used.
-+ Add favicon image for site.
+### Notes:
+
++ Thanks to [jcubic](https://github.com/jcubic)'s [jQuery Terminal](http://terminal.jcubic.pl/) for the awesome Terminal Emulator Plugin
++ Thanks to [zurb Foundation](foundation.zurb.com) for their Responsive Front-end Framework
++ Thanks to [Linh Pham](http://linhpham.me/) for the cool looking Social Media Icons
