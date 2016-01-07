@@ -2,7 +2,6 @@
 
 // Set Social Media Stuff
 //TODO: Add links!!!~~~~~
-//TODO: remove block grids, remove margins/paddings, stick them together in one large block of 2x3
 var sidebarDiv = document.getElementById("social-media");
 var smKeys = Object.keys(philipyoo.socialMedia);
 
@@ -27,13 +26,7 @@ for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
   sidebarDiv.appendChild(element);
 }
 
-
-// Set content for simple mobile view
-var mobileContainer = document.getElementById("mobile");
-
-
-
-
+// Set Terminal Commands
 var termCommands = {
   echo: function(cmd) {
     this.echo(cmd);
@@ -50,7 +43,6 @@ var termCommands = {
     }
 
     this.echo("<p class='header-main'>// List of Commands: </p>", {raw: true});
-    // this.echo("<span class='contents'>//-------------------</span>", {raw: true});
 
     for (var i = 0; i < validOptions.length; i++) {
       this.echo("<span>&nbsp; -> " + validOptions[i] + "</span>", {raw: true});
@@ -104,6 +96,7 @@ var termCommands = {
   },
   clear: function() {
     clear();
+    this.echo("Use `[[;gold;#243434]help]` for a list of commands\n");
   },
   colors: function() {
     this.echo("[[;#d3e7d3;#243434]1. test]");
@@ -128,6 +121,7 @@ var termCommands = {
   },
 }
 
+// Setup Terminal
 jQuery(function($, undefined) {
   var height = $(window).height();
 
