@@ -97,7 +97,7 @@ var termCommands = {
       this.echo("&nbsp;&nbsp;<p class='category'>" + projectNames[i]  + "</p>", {raw: true});
 
       this.echo("<p class='contents'>" + philipyoo.projects[projectNames[i]].info + "</p>", {raw: true});
-      this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a><br/><br/>", {raw: true});
+      this.echo("<a href=[[!gu" + philipyoo.projects[projectNames[i]].url + "]>Link to Project</a><br/><br/>", {raw: true});
     }
   },
   contact: function() {
@@ -133,6 +133,17 @@ var termCommands = {
     this.echo("[[;#ade0e0;#243434]19. test]");
     this.echo("This is supposed to be a secret command! How'd you get here?!");
   },
+  wut: function() {
+    var mylink = "www.google.com";
+
+    this.echo("Get the link to work");
+    this.echo("Get the link to work", {raw: true});
+    this.echo('<a href="www.google.com" target="_blank">' + mylink + '</a>', {raw: true, convertLinks: false});
+    this.echo('<a href="http://jquery.com/">jQuery</a>',{raw:true, Token:false, convertLinks:false, linksNoReferer: false});
+    this.echo();
+    this.echo("[[g;#EEEEEE;]www.google.com]");
+    this.echo();
+  }
 }
 
 // Setup Terminal
