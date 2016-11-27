@@ -1,36 +1,36 @@
 // $(document).foundation();
 
 // Set Social Media Stuff
-var sidebarDiv = document.getElementById("social-media");
-var smKeys = Object.keys(philipyoo.socialMedia);
-
-for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
-  // Create the div with class name
-  var element = document.createElement('div');
-  element.className = "small-4 medium-6 columns add-padding";
-
-  // Create link and set attribute to open link in new tab
-  var linkImg = document.createElement('a');
-  linkImg.href = philipyoo.socialMedia[smKeys[i]];
-  linkImg.setAttribute('target', '_blank');
-
-  // Create the img with class name
-  var img = document.createElement('img');
-  img.className = "img-icon";
-
-  // Get the key name and add to src for img
-  var key = smKeys[i]
-  img.src = "./img/" + smKeys[i] + ".png"
-
-  // Add the image to link
-  linkImg.appendChild(img);
-
-  // Add the link inside `element` div
-  element.appendChild(linkImg);
-
-  // Add the element to parent div `sidebarDiv`
-  sidebarDiv.appendChild(element);
-}
+// var sidebarDiv = document.getElementById("social-media");
+// var smKeys = Object.keys(philipyoo.socialMedia);
+//
+// for (var i = 0; i < Object.keys(philipyoo.socialMedia).length; i++) {
+//   // Create the div with class name
+//   var element = document.createElement('div');
+//   element.className = "small-4 medium-6 columns add-padding";
+//
+//   // Create link and set attribute to open link in new tab
+//   var linkImg = document.createElement('a');
+//   linkImg.href = philipyoo.socialMedia[smKeys[i]];
+//   linkImg.setAttribute('target', '_blank');
+//
+//   // Create the img with class name
+//   var img = document.createElement('img');
+//   img.className = "img-icon";
+//
+//   // Get the key name and add to src for img
+//   var key = smKeys[i]
+//   img.src = "./img/" + smKeys[i] + ".png"
+//
+//   // Add the image to link
+//   linkImg.appendChild(img);
+//
+//   // Add the link inside `element` div
+//   element.appendChild(linkImg);
+//
+//   // Add the element to parent div `sidebarDiv`
+//   sidebarDiv.appendChild(element);
+// }
 
 // Set Terminal Commands
 var termCommands = {
@@ -39,7 +39,7 @@ var termCommands = {
   },
   help: function() {
     // Exclude certain keys or categories within philipyoo.json
-    var exclusions = ["name", "location", "gender", "resumeLink", "socialMedia"];
+    var exclusions = ["name", "location", "gender", "resumeLink"];
     var validOptions = [];
 
     for (category in philipyoo) {
@@ -98,6 +98,13 @@ var termCommands = {
 
       this.echo("<p class='contents'>" + philipyoo.projects[projectNames[i]].info + "</p>", {raw: true});
       this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a><br/><br/>", {raw: true});
+    }
+  },
+  contact: function() {
+    var contact = Object.keys(philipyoo.contact);
+
+    for (var i = 0; i < contact.length; i++) {
+      this.echo('<a href="' + philipyoo.contact[contact[i]] + '">' + contact[i] + '</a>', {raw: true});
     }
   },
   clear: function() {

@@ -28,6 +28,8 @@ var philipyoo = {
       "I am a full-stack web developer who has a strong desire to build meaningful and fun applications. I am currently seeking opportunities to apply and expand upon my current skill sets. I am a quick learner who enjoys problem-solving, gaming, and contributing to a team environment."
     ],
     "education" : [
+      "Holberton School", ["Computer Science (Current)"],
+      "UCSD Extension", ["Java Programming (Current)"],
       "Dev Bootcamp", ["Web Development (2015)"],
       "University of San Diego", ["Bachelor of Business Administration (2010)"]
     ],
@@ -48,8 +50,8 @@ var philipyoo = {
       "url" : "https://github.com/philipyoo/terminal-chess"
     }
   },
-  "socialMedia" : {
-    "blogger" : "http://philipyoo.blogspot.com/",
+  "contact" : {
+    "medium" : "https://medium.com/@philipyoo10",
     "email" : "mailto:philipyoo10@gmail.com",
     "github" : "https://github.com/philipyoo",
     "linkedin" : "https://www.linkedin.com/in/philipyoo",
