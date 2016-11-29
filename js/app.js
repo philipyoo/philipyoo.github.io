@@ -97,7 +97,7 @@ var termCommands = {
       this.echo("&nbsp;&nbsp;<p class='category'>" + projectNames[i]  + "</p>", {raw: true});
 
       this.echo("<p class='contents'>" + philipyoo.projects[projectNames[i]].info + "</p>", {raw: true});
-      this.echo("<a href=[[!gu" + philipyoo.projects[projectNames[i]].url + "]>Link to Project</a><br/><br/>", {raw: true});
+      this.echo("<a href=" + philipyoo.projects[projectNames[i]].url + ">Link to Project</a><br/><br/>", {raw: true});
     }
   },
   contact: function() {
@@ -161,6 +161,9 @@ jQuery(function($, undefined) {
       },
       exit: false,
       tabcompletion: true,
+      completion: function(terminal, command, cb) {
+        cb(['help', 'about', 'random', 'resume', 'contact', 'projects', 'clear']);
+      },
       height: height
   });
 });
