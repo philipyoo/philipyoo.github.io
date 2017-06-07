@@ -1,48 +1,103 @@
-<!DOCTYPE html>
-<html class="no-js" lang="en">
+<!doctype html>
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Philip Yoo</title>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/terminal/jquery.terminal-0.9.2.css" />
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Philip Yoo</h1>
+        <p>Software Engineer, <a href="https://www.holbertonschool.com">@HolbertonSchool</a> Student, and <a href="https://devbootcamp.com/">@DevBootcamp</a> Grad.</p>
+        <p>
+          <a href="mailto:philipyoo10@gmail.com" data="Email: PhilipYoo10@gmail.com"><img class="social" src="./img/mail.png" hspace="10" /></a>
+          <a href="https://github.com/philipyoo" data="Github: philipyoo"><img class="social" src="./img/github.png"  hspace="10" /></a>
+          <a href="https://twitter.com/philipYoo10" data="Twitter: @philipYoo10"><img class="social" src="./img/twitter.png" hspace="10" /></a>
+        </p>
+        <p>
+          <a href="https://www.linkedin.com/in/philipyoo" data="LinkedIn: philipyoo"><img class="social" src="./img/linkedin.png" hspace="10" /></a>
+          <a href="https://medium.com/@philipyoo10" data="Medium: @philipyoo10"><img class="social" src="./img/medium.png" hspace="10" /></a>
+          <a href="https://stackoverflow.com/users/4803039/philip-yoo" data="stackoverflow: philip-yoo"><img class="social" src="./img/stackoverflow.png" hspace="10" /></a>
+        </p>
 
-    <div class="row full">
-      <!-- <div class="small-12 medium-12 large-3 columns sidebar">
-        <span class="name-title">Philip Yoo</span><br/>
-        <p><img class="style-mypic" src="./img/philyoo.jpg" /></p>
-        <span class="sub-title">Typing out things that seem cool.</span>
-
+        <pre><code>Burrito Expert, Professional Asian-American, and Gamer</code></pre>
+      </header>
+      <section>
+        <h1>Projects</h1>
         <hr/>
-        <div class="callout small alert" id="mobile">
 
-          <img class="warn-resize" src="./img/warning.png" />&nbsp;<span>Best viewed via fullscreen Desktop.</span><br/>
-        </div>
+        <h2>HBnB</h2>
+        <p><em>View the <a href="http://bit.ly/hbnbclone">source of this content</a>.</em></p>
+        <p>
+          An AirBnB clone built with RESTful API and a MySQL ORM.
+          <ul>
+            <li>A full-stack project with a custom CLI, temporary JSON file storage, persistent MySQL database using an ORM model, RESTful API, and unit tests to test different features of the project.</li>
+            <li>Takeaways from this project were a better understanding of implementing valid and thorough unit tests, creating a robust RESTful API, creating object-oriented Model classes and understanding the proper linking to the MySQL database, and using jinja templating with the API to display dynamic data from the database.</li>
+            <li>Built using Python Flask, MySQL, sqlalchemy, JavaScript, HTML, and CSS.</li>
+          </ul>
+        </p>
+        <hr/>
 
-        <div id="mobile">
-          <br/><br/>
-        </div>
+        <h2>Simple Shell</h2>
+        <p><em>View the <a href="http://bit.ly/simple_shell">source of this content</a>.</em></p>
+        <p>
+          A re-creation of a UNIX shell.
+          <ul>
+            <li>To better understand how a terminal parses and interprets a users input, this project was an attempt to re-create parsing of user input and using system calls (fork, execve, waitpid) to execute the executable command given.</li>
+            <li>Steps taken included parsing, replacing aliases, determining if command is a built-in, forking a child process, searching the $PATH environment variable for the executable, handling the command (whether valid or invalid), and printing prompt again after completion.</li>
+            <li>Built using C with restrictions on which libraries could be used.</li>
+          </ul>
+        </p>
+        <hr/>
 
-        <div class="row" id="social-media">
-        </div>
-      </div> -->
+        <h2>The Game</h2>
+        <p><em>View the <a href="http://bit.ly/the-game1">source of this content</a>.</em></p>
+        <p>
+          A 2D Multiplayer shooting game via the browser.
+          <ul>
+            <li>With a team of 5 and built over a 6-day period, our goal for this project was to discover creating a multiplayer shooting game.</li>
+            <li>My main focus on this project was to learn and use Phaser, a JavaScript physics game engine, to build the canvas element and apply game logic and functionality.</li>
+            <li>Implemented Agile development methodologies with object-orientation for easy translation of data to our websockets.</li>
+            <li>Built using MongoDB, NodeJS, ExpressJS, Socket.IO and Phaser.</li>
+          </ul>
+        </p>
+        <hr/>
 
-      <div class="large-12 columns content-body" id="desktop">
-        <div id="philips-term"></div>
-      </div>
+        <h2>Monty Interpreter</h2>
+        <p><em>View the <a href="http://bit.ly/monty_interpreter">source of this content</a>.</em></p>
+        <p>
+          An interpreter for Monty ByteCode files utilizing Stacks (LIFO) and Queues (FIFO).
+          <ul>
+            <li>Monty is a scripting language that is first compiled to Monty ByteCode (just like in Python). It relies on a unique stack, with specific instructions to manipulate it. This project is a recreation of compiling simple Monty ByteCode files.</li>
+            <li>Main focus is to create linked lists in C to emulate stacks and queues in storing and retrieving information.</li>
+          </ul>
+        </p>
+        <hr/>
+
+        <h2>Terminal Chess</h2>
+        <p><em>View the <a href="http://bit.ly/terminalchess">source of this content</a>.</em></p>
+        <p>
+          A simple 2 player chess game played in the terminal.
+          <ul>
+            <li>Implemented keystrokes, color of board and pieces, and basic game functionality.</li>
+            <li>Built using Ruby, creating object-oriented models.</li>
+          </ul>
+        </p>
+
+      </section>
+
+      <footer>
+        <p><small>Philip Yoo - 2017</small></p>
+      </footer>
     </div>
-
-
-    <script src="philipyoo.json" type="text/javascript"></script>
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/vendor/what-input.min.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/terminal/js/jquery.terminal-0.11.21.min.js"></script>
-    <script src="js/terminal/js/jquery.mousewheel-min.js"></script>
+    <script src="js/scale.fix.js"></script>
   </body>
 </html>
